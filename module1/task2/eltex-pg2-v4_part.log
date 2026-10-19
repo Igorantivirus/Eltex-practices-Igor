@@ -1,0 +1,140 @@
+eltex-pg2-v4@eltex-2026-autumn:~$ ls
+ls           lsb_release  lsinitramfs  lslocks      lsmod        lspci
+lsattr       lscpu        lsipc        lslogins     lsns         lsusb
+lsblk        lsfd         lsirq        lsmem        lsof
+eltex-pg2-v4@eltex-2026-autumn:~$ $HIST
+$HISTCMD       $HISTCONTROL   $HISTFILE      $HISTFILESIZE  $HISTSIZE
+eltex-pg2-v4@eltex-2026-autumn:~$ echo "Хранится: $HISTFILESIZE"
+Хранится: 2000
+eltex-pg2-v4@eltex-2026-autumn:~$ ls -d .*
+.bash_history  .bash_logout  .bashrc  .config  .lesshst  .local  .profile  .viminfo
+eltex-pg2-v4@eltex-2026-autumn:~$ HISTTIMEFORMAT="%F %T "
+eltex-pg2-v4@eltex-2026-autumn:~$ history 10
+  116  2026-10-14 13:35:14 winget --help
+  117  2026-10-14 13:37:43 echo $HISTFILESIZE
+  118  2026-10-14 13:38:10 echo "Максимальынй размер числа команд в файле истории"
+  119  2026-10-14 13:43:17 ls -d .*
+  120  2026-10-14 13:47:04 history
+  121  2026-10-14 13:47:36 clear
+  122  2026-10-14 13:48:38 echo "Хранится: $HISTFILESIZE"
+  123  2026-10-14 13:48:52 ls -d .*
+  124  2026-10-14 13:52:22 HISTTIMEFORMAT="%F %T "
+  125  2026-10-14 13:52:29 history 10
+eltex-pg2-v4@eltex-2026-autumn:~$ date
+Wed Oct 14 01:58:55 PM +07 2026
+eltex-pg2-v4@eltex-2026-autumn:~$ history 10
+  118  2026-10-14 13:38:10 echo "Максимальынй размер числа команд в файле истории"
+  119  2026-10-14 13:43:17 ls -d .*
+  120  2026-10-14 13:47:04 history
+  121  2026-10-14 13:47:36 clear
+  122  2026-10-14 13:48:38 echo "Хранится: $HISTFILESIZE"
+  123  2026-10-14 13:48:52 ls -d .*
+  124  2026-10-14 13:52:22 HISTTIMEFORMAT="%F %T "
+  125  2026-10-14 13:52:29 history 10
+  126  2026-10-14 13:58:55 date
+  127  2026-10-14 13:59:04 history 10
+eltex-pg2-v4@eltex-2026-autumn:~$ tail -n 10 $HISTFILE
+screen -S "`whoami`_part2"
+screen -ls
+clear
+echo $USER_part.log,
+echo $USER_part.log
+echo $USER _part.log
+echo $USER$_part.log
+screen -L -Logfile $USER$_part.log
+curl --help
+winget --help
+eltex-pg2-v4@eltex-2026-autumn:~$ PROMPT_COMMAND='history -a'
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $PROMPT_COMMAND$
+history -a$
+eltex-pg2-v4@eltex-2026-autumn:~$ gcc --version
+gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+eltex-pg2-v4@eltex-2026-autumn:~$ history 10
+  123  2026-10-14 13:48:52 ls -d .*
+  124  2026-10-14 13:52:22 HISTTIMEFORMAT="%F %T "
+  125  2026-10-14 13:52:29 history 10
+  126  2026-10-14 13:58:55 date
+  127  2026-10-14 13:59:04 history 10
+  128  2026-10-14 13:59:48 tail -n 10 $HISTFILE
+  129  2026-10-14 14:00:33 PROMPT_COMMAND='history -a'
+  130  2026-10-14 14:00:40 echo $PROMPT_COMMAND$
+  131  2026-10-14 14:00:58 gcc --version
+  132  2026-10-14 14:01:06 history 10
+eltex-pg2-v4@eltex-2026-autumn:~$ tail -n 10 $HISTFILE
+#1791961188
+tail -n 10 $HISTFILE
+#1791961233
+PROMPT_COMMAND='history -a'
+#1791961240
+echo $PROMPT_COMMAND$
+#1791961258
+gcc --version
+#1791961266
+history 10
+
+eltex-pg2-v4@eltex-2026-autumn:~$ DATE=$(date +%F)
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $DATE
+2026-10-14
+eltex-pg2-v4@eltex-2026-autumn:~$ TIME=$(date +%T)
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $TIME
+14:05:00
+eltex-pg2-v4@eltex-2026-autumn:~$ DATE_TIME=$(echo "$DATE $TIME")
+eltex-pg2-v4@eltex-2026-autumn:~$ echo DATE_TIME
+DATE_TIME
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $DATE_TIME
+2026-10-14 14:05:00
+
+eltex-pg2-v4@eltex-2026-autumn:~$ ls /bin/*[0-9]* /sbin/*[0-9]* > bins.txt
+eltex-pg2-v4@eltex-2026-autumn:~$ tail -n 20 bins.txt
+/sbin/e2fsck
+/sbin/e2image
+/sbin/e2label
+/sbin/e2mmpstatus
+/sbin/e2scrub
+/sbin/e2scrub_all
+/sbin/e2undo
+/sbin/e4crypt
+/sbin/e4defrag
+/sbin/fsck.ext2
+/sbin/fsck.ext3
+/sbin/fsck.ext4
+/sbin/killall5
+/sbin/mke2fs
+/sbin/mkfs.ext2
+/sbin/mkfs.ext3
+/sbin/mkfs.ext4
+/sbin/resize2fs
+/sbin/tune2fs
+/sbin/update-grub2
+eltex-pg2-v4@eltex-2026-autumn:~$ echo "Файлов очень много, зачистят терминал"
+Файлов очень много, зачистят терминал
+
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $PS1
+${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
+eltex-pg2-v4@eltex-2026-autumn:~$ PS1="$USER@$HOSTNAME-$(date +%H:%M)> "
+eltex-pg2-v4@eltex-2026-autumn-14:19>
+eltex-pg2-v4@eltex-2026-autumn-14:19>
+eltex-pg2-v4@eltex-2026-autumn-14:19> echo $SHLVL
+2
+
+eltex-pg2-v4@eltex-2026-autumn-14:19> export PS1
+eltex-pg2-v4@eltex-2026-autumn-14:19> bash
+eltex-pg2-v4@eltex-2026-autumn:~$ echo $PS1
+${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
+eltex-pg2-v4@eltex-2026-autumn:~$ exit
+exit
+eltex-pg2-v4@eltex-2026-autumn-14:19> bash --norc
+eltex-pg2-v4@eltex-2026-autumn-14:19> echo $SHLVL
+3
+eltex-pg2-v4@eltex-2026-autumn-14:19> exit
+exit
+
+eltex-pg2-v4@eltex-2026-autumn-14:19> mkdir ~/$(date +%Y)-{01..12}
+eltex-pg2-v4@eltex-2026-autumn-14:19> dir
+2026-01  2026-03  2026-05  2026-07  2026-09  2026-11  bins.txt  report_part1.txt
+2026-02  2026-04  2026-06  2026-08  2026-10  2026-12  file.txt
+eltex-pg2-v4@eltex-2026-autumn-14:19>
