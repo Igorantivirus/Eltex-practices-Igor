@@ -2209,3 +2209,22 @@ root@eltex-practice2-pg2-v4:~# exit
 exit
 
 Script done on 2026-10-19 08:02:42+00:00 [COMMAND_EXIT_CODE="1"]
+
+
+root@eltex-practice2-pg2-v4:~# su - user1 -c 'sudo /usr/bin/dmesg | head -n 5'
+[    0.000000] Linux version 6.8.0-147-generic (buildd@lcy02-amd64-081) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #147-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 24 11:33:16 UTC 2026 (Ubuntu 6.8.0-147.147-generic 6.8.12)
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+root@eltex-practice2-pg2-v4:~# install -o root -g root -m 4755 /root/Eltex-practices-Igor/module1/task2/adds/dmsg_script.sh /usr/local/bin/dmsg_check.sh
+root@eltex-practice2-pg2-v4:~# ls -l /usr/local/bin/dmsg_check.sh
+-rwsr-xr-x 1 root root 25 Oct 19 10:52 /usr/local/bin/dmsg_check.sh
+root@eltex-practice2-pg2-v4:~# su - user2 -c 'id; /usr/local/bin/dmsg_check.sh'
+uid=1002(user2) gid=1002(user2) groups=1002(user2),100(users),1004(grp)
+/usr/local/bin/dmsg_check.sh: line 2: /sbin/dmesg: No such file or directory
+root@eltex-practice2-pg2-v4:~# rm -f /usr/local/bin/dmsg_check.sh
+root@eltex-practice2-pg2-v4:~#
+root@eltex-practice2-pg2-v4:~# echo SUID установлен, но Linux игнорирует его для Bash-скриптов, поэтому скрипт не получает права root.
+SUID установлен, но Linux игнорирует его для Bash-скриптов, поэтому скрипт не получает права root.
+root@eltex-practice2-pg2-v4:~#

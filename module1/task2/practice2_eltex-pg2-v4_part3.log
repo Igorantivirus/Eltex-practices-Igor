@@ -1,25 +1,266 @@
 Script started on 2026-10-19 09:38:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="121" LINES="56"]
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mapt update[27mapt update
-[?2004l[33m0% [Working][0m            Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
-[33m0% [Connecting to ru.archive.ubuntu.com][0m[33m0% [Connecting to ru.archive.ubuntu.com][0m[33m0% [Connecting to ru.archive.ubuntu.com][0m[33m0% [Connecting to ru.archive.ubuntu.com][0m[33m0% [Connecting to ru.archive.ubuntu.com][0m[33m0% [Connecting to ru.archive.ubuntu.com][0m                                        Hit:2 http://ru.archive.ubuntu.com/ubuntu noble InRelease
-[33m                                        0% [Working][0m[33m0% [Waiting for headers][0m                        Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
-[33m0% [3 InRelease 6,920 B/126 kB 5%][0m[33m                                  0% [Working][0m[33m0% [Waiting for headers][0m                        Get:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
-[33m0% [4 InRelease 3,296 B/126 kB 3%][0m[33m                                  0% [Working][0m[33m24% [Waiting for headers][0m                         Get:5 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,397 kB]
-[33m24% [5 Packages 8,192 B/1,397 kB 1%][0m[33m                                    52% [Waiting for headers][0m                         Get:6 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
-                         Get:7 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,704 kB]
-[33m60% [7 Packages 197 kB/1,704 kB 12%][0m[33m60% [5 Packages store 0 B] [7 Packages 197 kB/1,704 kB 12%][0m                                                           Get:8 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
-[33m91% [5 Packages store 0 B] [8 Components-amd64 34.4 kB/388 kB 9%][0m[33m                                                                 99% [5 Packages store 0 B][0m                          Get:9 http://ru.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
-[33m99% [5 Packages store 0 B] [9 Components-amd64 940 B/940 B 100%][0m[33m                                                                99% [5 Packages store 0 B] [Waiting for headers][0m                                                Get:10 http://ru.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5,760 B]
-[33m99% [5 Packages store 0 B] [10 Components-amd64 2,091 B/5,760 B 36%][0m                                                                    Get:11 http://ru.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
-[33m99% [5 Packages store 0 B] [11 Components-amd64 11.7 kB/12.6 kB 93%][0m[33m                                                                    99% [5 Packages store 0 B][0m[33m                          99% [Working][0m[33m99% [6 Components-amd64 store 0 B][0m[33m                                  99% [Working][0m[33m99% [7 Packages store 0 B][0m[33m                          99% [Working][0m[33m99% [8 Components-amd64 store 0 B][0m[33m                                  100% [Working][0m[33m100% [9 Components-amd64 store 0 B][0m[33m                                   100% [Working][0m[33m100% [10 Components-amd64 store 0 B][0m[33m                                    100% [Working][0m[33m100% [11 Components-amd64 store 0 B][0m[33m                                    100% [Working][0m              Fetched 3,941 kB in 4s (1,106 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 41%Reading package lists... 41%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 58%Reading package lists... 58%Reading package lists... 61%Reading package lists... 61%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 73%Reading package lists... 73%Reading package lists... 78%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 90%Reading package lists... 90%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mapt update[27mapt update
+[?2004l
+[33m
+0% [Working][0m
+            
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m
+0% [Connecting to ru.archive.ubuntu.com][0m[33m
+0% [Connecting to ru.archive.ubuntu.com][0m[33m
+0% [Connecting to ru.archive.ubuntu.com][0m[33m
+0% [Connecting to ru.archive.ubuntu.com][0m[33m
+0% [Connecting to ru.archive.ubuntu.com][0m[33m
+0% [Connecting to ru.archive.ubuntu.com][0m
+                                        
+Hit:2 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+[33m
+                                        
+0% [Working][0m[33m
+0% [Waiting for headers][0m
+                        
+Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+[33m
+0% [3 InRelease 6,920 B/126 kB 5%][0m[33m
+                                  
+0% [Working][0m[33m
+0% [Waiting for headers][0m
+                        
+Get:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+[33m
+0% [4 InRelease 3,296 B/126 kB 3%][0m[33m
+                                  
+0% [Working][0m[33m
+24% [Waiting for headers][0m
+                         
+Get:5 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,397 kB]
+[33m
+24% [5 Packages 8,192 B/1,397 kB 1%][0m[33m
+                                    
+52% [Waiting for headers][0m
+                         
+Get:6 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+
+                         
+Get:7 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,704 kB]
+[33m
+60% [7 Packages 197 kB/1,704 kB 12%][0m[33m
+60% [5 Packages store 0 B] [7 Packages 197 kB/1,704 kB 12%][0m
+                                                           
+Get:8 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+[33m
+91% [5 Packages store 0 B] [8 Components-amd64 34.4 kB/388 kB 9%][0m[33m
+                                                                 
+99% [5 Packages store 0 B][0m
+                          
+Get:9 http://ru.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+[33m
+99% [5 Packages store 0 B] [9 Components-amd64 940 B/940 B 100%][0m[33m
+                                                                
+99% [5 Packages store 0 B] [Waiting for headers][0m
+                                                
+Get:10 http://ru.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5,760 B]
+[33m
+99% [5 Packages store 0 B] [10 Components-amd64 2,091 B/5,760 B 36%][0m
+                                                                    
+Get:11 http://ru.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+[33m
+99% [5 Packages store 0 B] [11 Components-amd64 11.7 kB/12.6 kB 93%][0m[33m
+                                                                    
+99% [5 Packages store 0 B][0m[33m
+                          
+99% [Working][0m[33m
+99% [6 Components-amd64 store 0 B][0m[33m
+                                  
+99% [Working][0m[33m
+99% [7 Packages store 0 B][0m[33m
+                          
+99% [Working][0m[33m
+99% [8 Components-amd64 store 0 B][0m[33m
+                                  
+100% [Working][0m[33m
+100% [9 Components-amd64 store 0 B][0m[33m
+                                   
+100% [Working][0m[33m
+100% [10 Components-amd64 store 0 B][0m[33m
+                                    
+100% [Working][0m[33m
+100% [11 Components-amd64 store 0 B][0m[33m
+                                    
+100% [Working][0m
+              
+Fetched 3,941 kB in 4s (1,106 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 3%
+
+Reading package lists... 3%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 41%
+
+Reading package lists... 41%
+
+Reading package lists... 57%
+
+Reading package lists... 57%
+
+Reading package lists... 57%
+
+Reading package lists... 57%
+
+Reading package lists... 58%
+
+Reading package lists... 58%
+
+Reading package lists... 61%
+
+Reading package lists... 61%
+
+Reading package lists... 64%
+
+Reading package lists... 64%
+
+Reading package lists... 69%
+
+Reading package lists... 69%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 78%
+
+Reading package lists... 78%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 83%
+
+Reading package lists... 83%
+
+Reading package lists... 85%
+
+Reading package lists... 85%
+
+Reading package lists... 90%
+
+Reading package lists... 90%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... Done
+
+Reading state information... 0% 
+
+Reading state information... 0%
+
+Reading state information... Done
 88 packages can be upgraded. Run 'apt list --upgradable' to see them.
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# p[Kapt install -y git gh
-[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# p[Kapt install -y git gh
+[?2004l
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... Done
+
+Reading state information... 0% 
+
+Reading state information... 0%
+
+Reading state information... Done
 git is already the newest version (1:2.43.0-1ubuntu7.3).
 git set to manually installed.
 The following NEW packages will be installed:
@@ -27,18 +268,168 @@ The following NEW packages will be installed:
 0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
 Need to get 8,836 kB of archives.
 After this operation, 45.4 MB of additional disk space will be used.
-[33m0% [Working][0m            Get:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 gh amd64 2.45.0-1ubuntu0.3 [8,836 kB]
-[33m0% [1 gh 11.8 kB/8,836 kB 0%][0m[33m80% [1 gh 8,836 kB/8,836 kB 100%][0m[33m                                 100% [Working][0m              Fetched 8,836 kB in 1s (13.2 MB/s)
+[33m
+0% [Working][0m
+            
+Get:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 gh amd64 2.45.0-1ubuntu0.3 [8,836 kB]
+[33m
+0% [1 gh 11.8 kB/8,836 kB 0%][0m[33m
+80% [1 gh 8,836 kB/8,836 kB 100%][0m[33m
+                                 
+100% [Working][0m
+              
+Fetched 8,836 kB in 1s (13.2 MB/s)
 
 7[0;55r8[1ASelecting previously unselected package gh.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 125712 files and directories currently installed.)
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 125712 files and directories currently installed.)
 Preparing to unpack .../gh_2.45.0-1ubuntu0.3_amd64.deb ...
 7[56;0f[42m[30mProgress: [  0%][49m[39m [...................................................................................................] 87[56;0f[42m[30mProgress: [ 20%][49m[39m [###################................................................................................] 8Unpacking gh (2.45.0-1ubuntu0.3) ...
 7[56;0f[42m[30mProgress: [ 40%][49m[39m [#######################################............................................................] 8Setting up gh (2.45.0-1ubuntu0.3) ...
 7[56;0f[42m[30mProgress: [ 60%][49m[39m [###########################################################........................................] 87[56;0f[42m[30mProgress: [ 80%][49m[39m [###############################################################################....................] 8Processing triggers for man-db (2.12.0-4build2) ...
 
-7[0;56r8[1A[JScanning processes... [                                                                                                 ]Scanning processes... [                                                                                                 ]Scanning processes... [=                                                                                                ]Scanning processes... [==                                                                                               ]Scanning processes... [===                                                                                              ]Scanning processes... [====                                                                                             ]Scanning processes... [=====                                                                                            ]Scanning processes... [=====                                                                                            ]Scanning processes... [======                                                                                           ]Scanning processes... [=======                                                                                          ]Scanning processes... [========                                                                                         ]Scanning processes... [=========                                                                                        ]Scanning processes... [==========                                                                                       ]Scanning processes... [===========                                                                                      ]Scanning processes... [===========                                                                                      ]Scanning processes... [============                                                                                     ]Scanning processes... [=============                                                                                    ]Scanning processes... [==============                                                                                   ]Scanning processes... [===============                                                                                  ]Scanning processes... [================                                                                                 ]Scanning processes... [=================                                                                                ]Scanning processes... [=================                                                                                ]Scanning processes... [==================                                                                               ]Scanning processes... [===================                                                                              ]Scanning processes... [====================                                                                             ]Scanning processes... [=====================                                                                            ]Scanning processes... [======================                                                                           ]Scanning processes... [======================                                                                           ]Scanning processes... [=======================                                                                          ]Scanning processes... [========================                                                                         ]Scanning processes... [=========================                                                                        ]Scanning processes... [==========================                                                                       ]Scanning processes... [===========================                                                                      ]Scanning processes... [============================                                                                     ]Scanning processes... [============================                                                                     ]Scanning processes... [=============================                                                                    ]Scanning processes... [==============================                                                                   ]Scanning processes... [===============================                                                                  ]Scanning processes... [================================                                                                 ]Scanning processes... [=================================                                                                ]Scanning processes... [==================================                                                               ]Scanning processes... [==================================                                                               ]Scanning processes... [===================================                                                              ]Scanning processes... [====================================                                                             ]Scanning processes... [=====================================                                                            ]Scanning processes... [======================================                                                           ]Scanning processes... [=======================================                                                          ]Scanning processes... [=======================================                                                          ]Scanning processes... [========================================                                                         ]Scanning processes... [=========================================                                                        ]Scanning processes... [==========================================                                                       ]Scanning processes... [===========================================                                                      ]Scanning processes... [============================================                                                     ]Scanning processes... [=============================================                                                    ]Scanning processes... [=============================================                                                    ]Scanning processes... [==============================================                                                   ]Scanning processes... [===============================================                                                  ]Scanning processes... [================================================                                                 ]Scanning processes... [=================================================                                                ]Scanning processes... [==================================================                                               ]Scanning processes... [===================================================                                              ]Scanning processes... [===================================================                                              ]Scanning processes... [====================================================                                             ]Scanning processes... [=====================================================                                            ]Scanning processes... [======================================================                                           ]Scanning processes... [=======================================================                                          ]Scanning processes... [========================================================                                         ]Scanning processes... [=========================================================                                        ]Scanning processes... [=========================================================                                        ]Scanning processes... [==========================================================                                       ]Scanning processes... [===========================================================                                      ]Scanning processes... [============================================================                                     ]Scanning processes... [=============================================================                                    ]Scanning processes... [==============================================================                                   ]Scanning processes... [==============================================================                                   ]Scanning processes... [===============================================================                                  ]Scanning processes... [================================================================                                 ]Scanning processes... [=================================================================                                ]Scanning processes... [==================================================================                               ]Scanning processes... [===================================================================                              ]Scanning processes... [====================================================================                             ]Scanning processes... [====================================================================                             ]Scanning processes... [=====================================================================                            ]Scanning processes... [======================================================================                           ]Scanning processes... [=======================================================================                          ]Scanning processes... [========================================================================                         ]Scanning processes... [=========================================================================                        ]Scanning processes... [==========================================================================                       ]Scanning processes... [==========================================================================                       ]Scanning processes... [===========================================================================                      ]Scanning processes... [============================================================================                     ]Scanning processes... [=============================================================================                    ]Scanning processes... [==============================================================================                   ]Scanning processes... [===============================================================================                  ]Scanning processes... [===============================================================================                  ]Scanning processes... [================================================================================                 ]Scanning processes... [=================================================================================                ]Scanning processes... [==================================================================================               ]Scanning processes... [===================================================================================              ]Scanning processes... [====================================================================================             ]Scanning processes... [=====================================================================================            ]Scanning processes... [=====================================================================================            ]Scanning processes... [======================================================================================           ]Scanning processes... [=======================================================================================          ]Scanning processes... [========================================================================================         ]Scanning processes... [=========================================================================================        ]Scanning processes... [==========================================================================================       ]Scanning processes... [===========================================================================================      ]Scanning processes... [===========================================================================================      ]Scanning processes... [============================================================================================     ]Scanning processes... [=============================================================================================    ]Scanning processes... [==============================================================================================   ]Scanning processes... [===============================================================================================  ]Scanning processes... [================================================================================================ ]Scanning processes... [=================================================================================================]Scanning processes...                                                                                                    
-Scanning linux images... [                                                                                              ]Scanning linux images... [=======================                                                                       ]Scanning linux images... [===============================================                                               ]Scanning linux images... [======================================================================                        ]Scanning linux images... [==============================================================================================]Scanning linux images...                                                                                                 
+7[0;56r8[1A[JScanning processes... [                                                                                                 ]
+Scanning processes... [                                                                                                 ]
+Scanning processes... [=                                                                                                ]
+Scanning processes... [==                                                                                               ]
+Scanning processes... [===                                                                                              ]
+Scanning processes... [====                                                                                             ]
+Scanning processes... [=====                                                                                            ]
+Scanning processes... [=====                                                                                            ]
+Scanning processes... [======                                                                                           ]
+Scanning processes... [=======                                                                                          ]
+Scanning processes... [========                                                                                         ]
+Scanning processes... [=========                                                                                        ]
+Scanning processes... [==========                                                                                       ]
+Scanning processes... [===========                                                                                      ]
+Scanning processes... [===========                                                                                      ]
+Scanning processes... [============                                                                                     ]
+Scanning processes... [=============                                                                                    ]
+Scanning processes... [==============                                                                                   ]
+Scanning processes... [===============                                                                                  ]
+Scanning processes... [================                                                                                 ]
+Scanning processes... [=================                                                                                ]
+Scanning processes... [=================                                                                                ]
+Scanning processes... [==================                                                                               ]
+Scanning processes... [===================                                                                              ]
+Scanning processes... [====================                                                                             ]
+Scanning processes... [=====================                                                                            ]
+Scanning processes... [======================                                                                           ]
+Scanning processes... [======================                                                                           ]
+Scanning processes... [=======================                                                                          ]
+Scanning processes... [========================                                                                         ]
+Scanning processes... [=========================                                                                        ]
+Scanning processes... [==========================                                                                       ]
+Scanning processes... [===========================                                                                      ]
+Scanning processes... [============================                                                                     ]
+Scanning processes... [============================                                                                     ]
+Scanning processes... [=============================                                                                    ]
+Scanning processes... [==============================                                                                   ]
+Scanning processes... [===============================                                                                  ]
+Scanning processes... [================================                                                                 ]
+Scanning processes... [=================================                                                                ]
+Scanning processes... [==================================                                                               ]
+Scanning processes... [==================================                                                               ]
+Scanning processes... [===================================                                                              ]
+Scanning processes... [====================================                                                             ]
+Scanning processes... [=====================================                                                            ]
+Scanning processes... [======================================                                                           ]
+Scanning processes... [=======================================                                                          ]
+Scanning processes... [=======================================                                                          ]
+Scanning processes... [========================================                                                         ]
+Scanning processes... [=========================================                                                        ]
+Scanning processes... [==========================================                                                       ]
+Scanning processes... [===========================================                                                      ]
+Scanning processes... [============================================                                                     ]
+Scanning processes... [=============================================                                                    ]
+Scanning processes... [=============================================                                                    ]
+Scanning processes... [==============================================                                                   ]
+Scanning processes... [===============================================                                                  ]
+Scanning processes... [================================================                                                 ]
+Scanning processes... [=================================================                                                ]
+Scanning processes... [==================================================                                               ]
+Scanning processes... [===================================================                                              ]
+Scanning processes... [===================================================                                              ]
+Scanning processes... [====================================================                                             ]
+Scanning processes... [=====================================================                                            ]
+Scanning processes... [======================================================                                           ]
+Scanning processes... [=======================================================                                          ]
+Scanning processes... [========================================================                                         ]
+Scanning processes... [=========================================================                                        ]
+Scanning processes... [=========================================================                                        ]
+Scanning processes... [==========================================================                                       ]
+Scanning processes... [===========================================================                                      ]
+Scanning processes... [============================================================                                     ]
+Scanning processes... [=============================================================                                    ]
+Scanning processes... [==============================================================                                   ]
+Scanning processes... [==============================================================                                   ]
+Scanning processes... [===============================================================                                  ]
+Scanning processes... [================================================================                                 ]
+Scanning processes... [=================================================================                                ]
+Scanning processes... [==================================================================                               ]
+Scanning processes... [===================================================================                              ]
+Scanning processes... [====================================================================                             ]
+Scanning processes... [====================================================================                             ]
+Scanning processes... [=====================================================================                            ]
+Scanning processes... [======================================================================                           ]
+Scanning processes... [=======================================================================                          ]
+Scanning processes... [========================================================================                         ]
+Scanning processes... [=========================================================================                        ]
+Scanning processes... [==========================================================================                       ]
+Scanning processes... [==========================================================================                       ]
+Scanning processes... [===========================================================================                      ]
+Scanning processes... [============================================================================                     ]
+Scanning processes... [=============================================================================                    ]
+Scanning processes... [==============================================================================                   ]
+Scanning processes... [===============================================================================                  ]
+Scanning processes... [===============================================================================                  ]
+Scanning processes... [================================================================================                 ]
+Scanning processes... [=================================================================================                ]
+Scanning processes... [==================================================================================               ]
+Scanning processes... [===================================================================================              ]
+Scanning processes... [====================================================================================             ]
+Scanning processes... [=====================================================================================            ]
+Scanning processes... [=====================================================================================            ]
+Scanning processes... [======================================================================================           ]
+Scanning processes... [=======================================================================================          ]
+Scanning processes... [========================================================================================         ]
+Scanning processes... [=========================================================================================        ]
+Scanning processes... [==========================================================================================       ]
+Scanning processes... [===========================================================================================      ]
+Scanning processes... [===========================================================================================      ]
+Scanning processes... [============================================================================================     ]
+Scanning processes... [=============================================================================================    ]
+Scanning processes... [==============================================================================================   ]
+Scanning processes... [===============================================================================================  ]
+Scanning processes... [================================================================================================ ]
+Scanning processes... [=================================================================================================]
+Scanning processes...                                                                                                    
+Scanning linux images... [                                                                                              ]
+Scanning linux images... [=======================                                                                       ]
+Scanning linux images... [===============================================                                               ]
+Scanning linux images... [======================================================================                        ]
+Scanning linux images... [==============================================================================================]
+Scanning linux images...                                                                                                 
 
 Running kernel seems to be up-to-date.
 
@@ -49,21 +440,36 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgit config --global user.name[27mgit config --global user.name @@[K[K""[7mIgorantivirus[27m"Igorantivirus"
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgit config --global user.email[27mgit config --global user.email ""[7mgora.antip@gmail.com[27m"gora.antip@gmail.com"
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgit config --global init.defaultBranch main[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global init.defaultBranch main
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgit config --global --list[27mgit config --global --list
-[?2004l[?1h=user.name=Igorantivirus[m
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgit config --global user.name[27mgit config --global user.name @@[K[K""[7mIgorantivirus[27m"Igorantivirus"
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgit config --global user.email[27mgit config --global user.email ""[7mgora.antip@gmail.com[27m"gora.antip@gmail.com"
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgit config --global init.defaultBranch main[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global init.defaultBranch main
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgit config --global --list[27mgit config --global --list
+[?2004l
+[?1h=
+user.name=Igorantivirus[m
 user.email=gora.antip@gmail.com[m
 init.defaultbranch=main[m
-[K[?1l>[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mssh-keygen -t ed25519 -f ~/.ssh/github_eltex -N ""[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cssh-keygen -t ed25519 -f ~/.ssh/github_eltex -N ""
-[?2004lGenerating public/private ed25519 key pair.
+
+[K[?1l>[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mssh-keygen -t ed25519 -f ~/.ssh/github_eltex -N ""[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cssh-keygen -t ed25519 -f ~/.ssh/github_eltex -N ""
+[?2004l
+Generating public/private ed25519 key pair.
 Your identification has been saved in /root/.ssh/github_eltex
 Your public key has been saved in /root/.ssh/github_eltex.pub
 The key fingerprint is:
@@ -80,14 +486,24 @@ The key's randomart image is:
 |        + o.. *  |
 |       . o. .. o.|
 +----[SHA256]-----+
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mls -la ~/.ssh/github_eltex*[27mls -la ~/.ssh/github_eltex*\
-[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# ls -la ~/.ssh/github_eltex*\[K
-[?2004l-rw------- 1 root root 419 Oct 19 09:40 /root/.ssh/github_eltex
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mls -la ~/.ssh/github_eltex*[27m ls -la ~/.ssh/github_eltex*\
+[?2004l
+[?2004h>  ^C[?2004l
+[?2004h[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# ls -la ~/.ssh/github_eltex*\[K
+[?2004l
+-rw------- 1 root root 419 Oct 19 09:40 /root/.ssh/github_eltex
 -rw-r--r-- 1 root root 109 Oct 19 09:40 /root/.ssh/github_eltex.pub
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# ls -la ~/.ssh/github_eltex*[C[C[C[C[C[C[C[C[C[C[C[C[C[Knano [7m/root/.ssh/github_eltex.pub[27m/root/.ssh/github_eltex.pub
-[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;54H(B[0;7m[ Reading... ](B[m[54;60H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 7.2                                   /root/.ssh/github_eltex.pub                                             [1;120H(B[m[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2dssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGtgQK1uiCTL2BX2ujkJx585G75ZasLSFMGNhqm6pKQR root@eltex-practice2-pg2-v4[?12l[?25h[?25l[54d[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# gh auth login
-[?2004l7[?25l8[0G[2K[0;1;92m? [0m[0;1;99mWhat account do you want to log into?[0m  [0;36m[Use arrows to move, type to filter][0m
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# ls -la ~/.ssh/github_eltex*[C[C[C[C[C[C[C[C[C[C[C[C[C[Knano [7m/root/.ssh/github_eltex.pub[27m/root/.ssh/github_eltex.pub
+[?2004l
+[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;54H(B[0;7m[ Reading... ](B[m[54;60H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 7.2                                   /root/.ssh/github_eltex.pub                                             [1;120H(B[m
+[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark
+[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy
+[2dssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGtgQK1uiCTL2BX2ujkJx585G75ZasLSFMGNhqm6pKQR root@eltex-practice2-pg2-v4
+[?12l[?25h[?25l[54d[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# gh auth login
+[?2004l
+7[?25l8[0G[2K[0;1;92m? [0m[0;1;99mWhat account do you want to log into?[0m  [0;36m[Use arrows to move, type to filter][0m
 [0;1;36m> GitHub.com[0m
 [0;39m  GitHub Enterprise Server[0m
 7[1A[0G[1A[0G8[?25h8[0G[2K[1A[0G[2K[1A[0G[2K[1A[0G[2K[0;1;92m? [0m[0;1;99mWhat account do you want to log into?[0m[0;36m GitHub.com[0m
@@ -119,84 +535,194 @@ The key's randomart image is:
 [0;33m![0m Authentication credentials saved in plain text
 [0;32m✓[0m Uploaded the SSH key to your GitHub account: [0;1;39m/root/.ssh/github_eltex.pub[0m
 [0;32m✓[0m Logged in as [0;1;39mIgorantivirus[0m
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgh auth status[27mgh auth status
-[?2004l[0;1;39mgithub.com[0m
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgh auth status[27mgh auth status
+[?2004l
+[0;1;39mgithub.com[0m
   [0;32m✓[0m Logged in to github.com account [0;1;39mIgorantivirus[0m (/root/.config/gh/hosts.yml)
   - Active account: [0;1;39mtrue[0m
   - Git operations protocol: [0;1;39mssh[0m
   - Token: [0;1;39mgho_************************************[0m
   - Token scopes: [0;1;39m'admin:public_key', 'gist', 'read:org', 'repo'[0m
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# [7mgh auth setup-git --hostname github.com[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgh auth setup-git --hostname github.com
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# пр кузщ [K[K[K[K[K[K[K[Kgjh [K[K[Kh repo create ""E"l"t"e"x"-"p"r"a"c"t"i"c"e"s"-"I"g"o"r"[C --public
-[?2004l[0;32m✓[0m Created repository Igorantivirus/Eltex-practices-Igor on GitHub
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# [7mgh auth setup-git --hostname github.com[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgh auth setup-git --hostname github.com
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# пр кузщ [K[K[K[K[K[K[K[K gjh [K[K[Kh repo create ""E"l"t"e"x"-"p"r"a"c"t"i"c"e"s"-"I"g"o"r"[C --public
+[?2004l
+[0;32m✓[0m Created repository Igorantivirus/Eltex-practices-Igor on GitHub
   https://github.com/Igorantivirus/Eltex-practices-Igor
-[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# mkdir [7mEltex-practices-Igor[27mEltex-practices-Igor
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# cd [7mEltex-practices-Igor[27mEltex-practices-Igor
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# nano README.md
-[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                            README.md                                                      [1;120H(B[m[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;69H(B[0;7m*[120G(B[m[?12l[?25h[2d(B[0;1m[33m#[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mG[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt[39m(B[m[?25l[?12l[?25h(B[0;1m[33mh[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu[39m(B[m[?25l[?12l[?25h(B[0;1m[33mb[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mе[39m(B[m[?25l[?12l[?25h(B[0;1m[33mп[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mз[39m(B[m[?25l[54d[K[?12l[?25h[2;15H(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mй[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mд[39m(B[m[?25l[?12l[?25h(B[0;1m[33mл[39m(B[m[?25l[?12l[?25h(B[0;1m[33mя[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mв[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mй[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mп[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mа[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25hА[?25l[?12l[?25hн[?25l[?12l[?25hти[?25l[?12l[?25hп[?25l[?12l[?25hо[?25l[?12l[?25hв[?25l[?12l[?25h [?25l[?12l[?25hИ[?25l[?12l[?25hг[?25l[?12l[?25hо[?25l[?12l[?25hр[?25l[?12l[?25hь[?25l[?12l[?25h,[?25l[?12l[?25h [?25l[?12l[?25h2[?25l[?12l[?25h-[?25l[?12l[?25hа[?25l[?12l[?25hя[?25l[?12l[?25h [?25l[?12l[?25hп[?25l[?12l[?25hо[?25l[?12l[?25hд[?25l[?12l[?25hг[?25l[?12l[?25hр[?25l[?12l[?25hу[?25l[?12l[?25hп[?25l[?12l[?25hп[?25l[?12l[?25hа[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25leltex-practice2-pg2-v4[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[7G[?25l[?12l[?25h[6;17H[?25l[?12l[?25hpg2-[?25l[?12l[?25hv[?25l[?12l[?25h[A[?25l[?12l[?25h[4;30H[?25l[?12l[?25h,[?25l[?12l[?25h [?25l[?12l[?25h4[?25l[?12l[?25h-[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hы[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hв[?25l[?12l[?25hа[?25l[?12l[?25hр[?25l[?12l[?25hи[?25l[?12l[?25hа[?25l[?12l[?25hн[?25l[?12l[?25hт[?25l[?12l[?25h.[?25l[54d(B[0;7mSave modified buffer?                                                                                                    [55;1H Y(B[m Yes[K[56d(B[0;7m N(B[m No  [56;16H (B[0;7m^C(B[m Cancel[K[54;23H[?12l[?25h[?25l[55d(B[0;7m^G(B[m Help[55;31H(B[0;7mM-D(B[m DOS Format[55;61H(B[0;7mM-A(B[m Append[55;91H(B[0;7mM-B(B[m Backup File[56d(B[0;7m^C(B[m Cancel[17G[14X[56;31H(B[0;7mM-M(B[m Mac Format[56;61H(B[0;7mM-P(B[m Prepend[56;91H(B[0;7m^T(B[m Browse[54d(B[0;7mFile Name to Write: README.md(B[m[?12l[?25h[?25l[54;53H[1K (B[0;7m[ Writing... ](B[m[K[1;69H(B[0;7m [120G(B[m[54;53H(B[0;7m[ Wrote 5 lines ](B[m[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git init
-[?2004lInitialized empty Git repository in /root/Eltex-practices-Igor/.git/
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git add README.md 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git commit -m ''[K[K""f"i"r"s"t" "c"o"m"m"i"t"
-[?2004l[main (root-commit) 9b5061c] first commit
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# mkdir [7mEltex-practices-Igor[27mEltex-practices-Igor
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# cd [7mEltex-practices-Igor[27mEltex-practices-Igor
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# nano README.md
+[?2004l
+[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                            README.md                                                      [1;120H(B[m
+[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark
+[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy
+[2d[?12l[?25h[?25l[1;69H(B[0;7m*[120G(B[m[?12l[?25h
+[2d(B[0;1m[33m#[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mG[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt[39m(B[m[?25l[?12l[?25h(B[0;1m[33mh[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu[39m(B[m[?25l[?12l[?25h(B[0;1m[33mb[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mе[39m(B[m[?25l[?12l[?25h(B[0;1m[33mп[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mз[39m(B[m[?25l
+[54d[K[?12l[?25h[2;15H(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mй[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mд[39m(B[m[?25l[?12l[?25h(B[0;1m[33mл[39m(B[m[?25l[?12l[?25h(B[0;1m[33mя[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mв[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mо[39m(B[m[?25l[?12l[?25h(B[0;1m[33mй[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mп[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mа[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mи[39m(B[m[?25l
+[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25hА[?25l[?12l[?25hн[?25l[?12l[?25hти[?25l[?12l[?25hп[?25l[?12l[?25hо[?25l[?12l[?25hв[?25l[?12l[?25h [?25l[?12l[?25hИ[?25l[?12l[?25hг[?25l[?12l[?25hо[?25l[?12l[?25hр[?25l[?12l[?25hь[?25l[?12l[?25h,[?25l[?12l[?25h [?25l[?12l[?25h2[?25l[?12l[?25h-[?25l[?12l[?25hа[?25l[?12l[?25hя[?25l[?12l[?25h [?25l[?12l[?25hп[?25l[?12l[?25hо[?25l[?12l[?25hд[?25l[?12l[?25hг[?25l[?12l[?25hр[?25l[?12l[?25hу[?25l[?12l[?25hп[?25l[?12l[?25hп[?25l[?12l[?25hа[?25l
+[5d[?12l[?25h[?25l[6d[?12l[?25h[?25leltex-practice2-pg2-v4[?12l[?25h[?25l[?12l[?25h
+[?25l[?12l[?25h[7G[?25l[?12l[?25h[6;17H[?25l[?12l[?25hpg2-[?25l[?12l[?25hv[?25l[?12l[?25h
+[A[?25l[?12l[?25h[4;30H[?25l[?12l[?25h,[?25l[?12l[?25h [?25l[?12l[?25h4[?25l[?12l[?25h-[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hы[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hв[?25l[?12l[?25hа[?25l[?12l[?25hр[?25l[?12l[?25hи[?25l[?12l[?25hа[?25l[?12l[?25hн[?25l[?12l[?25hт[?25l[?12l[?25h.[?25l
+[54d(B[0;7mSave modified buffer?                                                                                                    [55;1H Y(B[m Yes[K
+[56d(B[0;7m N(B[m No  [56;16H (B[0;7m^C(B[m Cancel[K[54;23H[?12l[?25h[?25l
+[55d(B[0;7m^G(B[m Help[55;31H(B[0;7mM-D(B[m DOS Format[55;61H(B[0;7mM-A(B[m Append[55;91H(B[0;7mM-B(B[m Backup File
+[56d(B[0;7m^C(B[m Cancel[17G[14X[56;31H(B[0;7mM-M(B[m Mac Format[56;61H(B[0;7mM-P(B[m Prepend[56;91H(B[0;7m^T(B[m Browse
+[54d(B[0;7mFile Name to Write: README.md(B[m[?12l[?25h[?25l[54;53H[1K (B[0;7m[ Writing... ](B[m[K[1;69H(B[0;7m [120G(B[m[54;53H(B[0;7m[ Wrote 5 lines ](B[m
+[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git init
+[?2004l
+Initialized empty Git repository in /root/Eltex-practices-Igor/.git/
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git add README.md 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git commit -m ''[K[K""f"i"r"s"t" "c"o"m"m"i"t"
+[?2004l
+[main (root-commit) 9b5061c] first commit
  1 file changed, 5 insertions(+)
  create mode 100644 README.md
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git branch -M main
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit remote add origin https://github.com/твой-username/название_репоз[27m[7mи[27m[7mтория.git [27m
-[7mgit push -u origin main[27m[A[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git remote add origin https://github.com/твой-username/название_репозитория.git
-git push -u origin main[K[A[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[Cbranch -M main[K
-[K
-[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7mgit remote add origin https://github.com/твой-usern[27m[7ma[27m[7mme/название_репозитория.git[27m[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[41Pcommit -m "first commit"
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit remote add origin https://github.com/твой-username/название_репоз[27m[7mи[27m[7mтория.git[27m[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git remote add origin https://github.com/твой-username/название_репозитория.git[1P.git[1P.git[1P.git[1P.git[C[C[1P.git[C[1P.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.g[1Pit[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.gi[1Pt[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.git[K[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.git [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.git
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[7mEltex-practice[27m[7ms[27m[7m-Igor[27m.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CEltex-practices-Igor.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-[1PIgor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-I[1Pgor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Ig[1Por.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igo[1Pr.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor[1P.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.[1Pgit[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.g[1Pit[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.gi[1Pt[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.git[K[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.git [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/Eltex-practices-Igor.git
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/Eltex-practices-Igor.git[1P/Eltex-practices-Igor.gitI/Eltex-practices-Igor.gitg/Eltex-practices-Igor.gito/Eltex-practices-Igor.git [A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs/Eltex-practices-Igor.git[A]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git push -u origin main
-[?2004lEnumerating objects: 3, done.
-Counting objects:  33% (1/3)Counting objects:  66% (2/3)Counting objects: 100% (3/3)Counting objects: 100% (3/3), done.
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git branch -M main
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit remote add origin https://github.com/твой-username/название_репоз[27m[7mи[27m[7mтория.git [27m
+
+[7mgit push -u origin main[27m [A[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git remote add origin https://github.com/твой-username/название_репозитория.git
+
+git push -u origin main[K[A[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[Cbranch -M main[K
+
+[K
+
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7mgit remote add origin https://github.com/твой-usern[27m[7ma[27m[7mme/название_репозитория.git[27m[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[41Pcommit -m "first commit"
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K  
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit remote add origin https://github.com/твой-username/название_репоз[27m[7mи[27m[7mтория.git[27m[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git remote add origin https://github.com/твой-username/название_репозитория.git[1P.git[1P.git[1P.git[1P.git
+[C[C[1P.git
+[C
+[1P.git
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.g[1Pit[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.gi[1Pt[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.git[K[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.git 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.git
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[1P.git[7mEltex-practice[27m[7ms[27m[7m-Igor[27m.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CEltex-practices-Igor.git
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-[1PIgor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-I[1Pgor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Ig[1Por.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igo[1Pr.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor[1P.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.[1Pgit[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.g[1Pit[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.gi[1Pt[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.git[K[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Eltex-practices-Igor.git 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/Eltex-practices-Igor.git
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/Eltex-practices-Igor.git[1P/Eltex-practices-Igor.gitI/Eltex-practices-Igor.gitg/Eltex-practices-Igor.gito/Eltex-practices-Igor.git [A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs/Eltex-practices-Igor.git[A
+]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git push -u origin main
+[?2004l
+Enumerating objects: 3, done.
+Counting objects:  33% (1/3)
+Counting objects:  66% (2/3)
+Counting objects: 100% (3/3)
+Counting objects: 100% (3/3), done.
 Delta compression using up to 2 threads
-Compressing objects:  50% (1/2)Compressing objects: 100% (2/2)Compressing objects: 100% (2/2), done.
-Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Compressing objects:  50% (1/2)
+Compressing objects: 100% (2/2)
+Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)
+Writing objects:  66% (2/3)
+Writing objects: 100% (3/3)
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Igorantivirus/Eltex-practices-Igor.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git push -u origin main[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mmkdir -p module1/task1[27mmkdir -p module1/task1
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 3[Kmkdir -p module1/task1[K2[1Pmodule1/task2[1Pmodule1/task2[1Pmodule1/task2
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# mkdir module1/task2[C[C[C[C[C[C[C[C[C[C[C[C[C[K3
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmkdir -p module2/task1 module2/task2 module2/task3[27mmkdir -p module2/task1 module2/task2 module2/task3
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# вгк[K[K[Kdir
-[?2004lmodule1  module2  README.md
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# c dm[K[K[Kd c[Kmodule
-[?2004lbash: cd: module: No such file or directory
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# dir[K[K[Kcd module[6Pdircd module1
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# dir
-[?2004ltask1  task2  task3
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# cd task1
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task1root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task1# dir
-[?2004lreport_part1.txt
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task1root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task1# cd ..
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# cd task2
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task2root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task2# dir
-[?2004leltex-pg2-v4_part.log
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task2root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task2# cd /..[K[K[K../../
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mfind . -type f[27mfind . -type f
-[?2004l./module2/task1/practice2_eltex-pg2-v4_part1_server1.log
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git push -u origin main[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K                       [7mmkdir -p module1/task1[27mmkdir -p module1/task1
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 3[Kmkdir -p module1/task1[K2[1Pmodule1/task2[1Pmodule1/task2[1Pmodule1/task2
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# mkdir module1/task2[C[C[C[C[C[C[C[C[C[C[C[C[C[K3
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmkdir -p module2/task1 module2/task2 module2/task3[27mmkdir -p module2/task1 module2/task2 module2/task3
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# вгк[K[K[K dir
+[?2004l
+module1  module2  README.md
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# c dm [K[K[Kd c[Km odule
+[?2004l
+bash: cd: module: No such file or directory
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# dir[K[K[Kcd module[6Pdircd module1
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# dir
+[?2004l
+task1  task2  task3
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# cd tas k1
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task1 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task1# dir
+[?2004l
+report_part1.txt
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task1 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task1# cd ..
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1# cd ta sk 2
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task2 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task2# dir
+[?2004l
+eltex-pg2-v4_part.log
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor/module1/task2 root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor/module1/task2# cd /..[K[K[K../../
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mfind . -type f[27mfind . -type f
+[?2004l
+./module2/task1/practice2_eltex-pg2-v4_part1_server1.log
 ./README.md
 ./module1/task2/eltex-pg2-v4_part.log
 ./module1/task1/report_part1.txt
@@ -230,47 +756,83 @@ branch 'main' set up to track 'origin/main'.
 ./.git/refs/remotes/origin/main
 ./.git/refs/heads/main
 ./.git/config
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mfind . -name .git -prune -o -type f -print[27mfind . -name .git -prune -o -type f -print
-[?2004l./module2/task1/practice2_eltex-pg2-v4_part1_server1.log
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mfind . -name .git -prune -o -type f -print[27mfind . -name .git -prune -o -type f -print
+[?2004l
+./module2/task1/practice2_eltex-pg2-v4_part1_server1.log
 ./README.md
 ./module1/task2/eltex-pg2-v4_part.log
 ./module1/task1/report_part1.txt
 ./module1/task3/eltex-pg2-v4_part3_gt20M.log
 ./module1/task3/eltex-pg2-v4_part3.log
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /practice2_eltex-pg2-v4_part1.log module2/task1/[27mmv /practice2_eltex-pg2-v4_part1.log module2/task1/
-[?2004lmv: cannot stat '/practice2_eltex-pg2-v4_part1.log': No such file or directory
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/
-[?2004lmv: cannot stat '/root/practice2_eltex-pg2-v4_part1.log': No such file or directory
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7m1/[27m[1P1[K[7mmv /root/practice2_eltex-pg2-v4_part2.log module2/task2/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part2.log module2/task2/
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part3.log module2/task3/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part3.log module2/task3/
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# mv /root/practice2_eltex-pg2-v4_part3.log module2/task3/2.log module2/task2/1.log module2/task1/[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pfind . -name .git -prune -o -type f -print
-[?2004l./module2/task2/practice2_eltex-pg2-v4_part2.log
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /practice2_eltex-pg2-v4_part1.log module2/task1/[27mmv /practice2_eltex-pg2-v4_part1.log module2/task1/
+[?2004l
+mv: cannot stat '/practice2_eltex-pg2-v4_part1.log': No such file or directory
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part1.log module2/task1/
+[?2004l
+mv: cannot stat '/root/practice2_eltex-pg2-v4_part1.log': No such file or directory
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# 
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7m1/[27m[1P1[K [7mmv /root/practice2_eltex-pg2-v4_part2.log module2/task2/[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part2.log module2/task2/
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mmv /root/practice2_eltex-pg2-v4_part3.log module2/task3/[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv /root/practice2_eltex-pg2-v4_part3.log module2/task3/
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# mv /root/practice2_eltex-pg2-v4_part3.log module2/task3/2.log module2/task2/1.log module2/task1/[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pfind . -name .git -prune -o -type f -print
+[?2004l
+./module2/task2/practice2_eltex-pg2-v4_part2.log
 ./module2/task1/practice2_eltex-pg2-v4_part1_server1.log
 ./module2/task1/practice2_eltex-pg2-v4_part1.log
 ./module2/task3/practice2_eltex-pg2-v4_part3.log
@@ -279,9 +841,11 @@ branch 'main' set up to track 'origin/main'.
 ./module1/task1/report_part1.txt
 ./module1/task3/eltex-pg2-v4_part3_gt20M.log
 ./module1/task3/eltex-pg2-v4_part3.log
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit add .[27mgit add .
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git status
-[?2004lOn branch main
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# [7mgit add .[27mgit add .
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git status
+[?2004l
+On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
@@ -295,8 +859,9 @@ Changes to be committed:
 	[32mnew file:   module2/task2/practice2_eltex-pg2-v4_part2.log[m
 	[32mnew file:   module2/task3/practice2_eltex-pg2-v4_part3.log[m
 
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git commit -m ""Д"о"б"а"в"л"е"н"ы" "ф"а"й"л"ы" "д"в"у"х" "п"р"а"к"т"и"к"
-[?2004l[main ff7e949] Добавлены файлы двух практик
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git commit -m ""Д"о"б"а"в"л"е"н"ы" "ф"а"й"л"ы" "д"в"у"х" "п"р"а"к"т"и"к"
+[?2004l
+[main ff7e949] Добавлены файлы двух практик
  8 files changed, 11828 insertions(+)
  create mode 100644 module1/task1/report_part1.txt
  create mode 100644 module1/task2/eltex-pg2-v4_part.log
@@ -306,28 +871,212 @@ Changes to be committed:
  create mode 100644 module2/task1/practice2_eltex-pg2-v4_part1_server1.log
  create mode 100644 module2/task2/practice2_eltex-pg2-v4_part2.log
  create mode 100644 module2/task3/practice2_eltex-pg2-v4_part3.log
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# пше [K[K[K[Kgit push
-[?2004lEnumerating objects: 19, done.
-Counting objects:   5% (1/19)Counting objects:  10% (2/19)Counting objects:  15% (3/19)Counting objects:  21% (4/19)Counting objects:  26% (5/19)Counting objects:  31% (6/19)Counting objects:  36% (7/19)Counting objects:  42% (8/19)Counting objects:  47% (9/19)Counting objects:  52% (10/19)Counting objects:  57% (11/19)Counting objects:  63% (12/19)Counting objects:  68% (13/19)Counting objects:  73% (14/19)Counting objects:  78% (15/19)Counting objects:  84% (16/19)Counting objects:  89% (17/19)Counting objects:  94% (18/19)Counting objects: 100% (19/19)Counting objects: 100% (19/19), done.
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# пше [K[K[K[K git push
+[?2004l
+Enumerating objects: 19, done.
+Counting objects:   5% (1/19)
+Counting objects:  10% (2/19)
+Counting objects:  15% (3/19)
+Counting objects:  21% (4/19)
+Counting objects:  26% (5/19)
+Counting objects:  31% (6/19)
+Counting objects:  36% (7/19)
+Counting objects:  42% (8/19)
+Counting objects:  47% (9/19)
+Counting objects:  52% (10/19)
+Counting objects:  57% (11/19)
+Counting objects:  63% (12/19)
+Counting objects:  68% (13/19)
+Counting objects:  73% (14/19)
+Counting objects:  78% (15/19)
+Counting objects:  84% (16/19)
+Counting objects:  89% (17/19)
+Counting objects:  94% (18/19)
+Counting objects: 100% (19/19)
+Counting objects: 100% (19/19), done.
 Delta compression using up to 2 threads
-Compressing objects:   6% (1/16)Compressing objects:  12% (2/16)Compressing objects:  18% (3/16)Compressing objects:  25% (4/16)Compressing objects:  31% (5/16)Compressing objects:  37% (6/16)Compressing objects:  43% (7/16)Compressing objects:  50% (8/16)Compressing objects:  56% (9/16)Compressing objects:  62% (10/16)Compressing objects:  68% (11/16)Compressing objects:  75% (12/16)Compressing objects:  81% (13/16)Compressing objects:  87% (14/16)Compressing objects:  93% (15/16)Compressing objects: 100% (16/16)Compressing objects: 100% (16/16), done.
-Writing objects:   5% (1/18)Writing objects:  11% (2/18)Writing objects:  16% (3/18)Writing objects:  22% (4/18)Writing objects:  27% (5/18)Writing objects:  33% (6/18)Writing objects:  38% (7/18)Writing objects:  44% (8/18)Writing objects:  50% (9/18)Writing objects:  55% (10/18)Writing objects:  61% (11/18)Writing objects:  66% (12/18)Writing objects:  72% (13/18)Writing objects:  77% (14/18)Writing objects:  83% (15/18)Writing objects:  88% (16/18)Writing objects:  94% (17/18)Writing objects: 100% (18/18)Writing objects: 100% (18/18), 169.03 KiB | 9.94 MiB/s, done.
+Compressing objects:   6% (1/16)
+Compressing objects:  12% (2/16)
+Compressing objects:  18% (3/16)
+Compressing objects:  25% (4/16)
+Compressing objects:  31% (5/16)
+Compressing objects:  37% (6/16)
+Compressing objects:  43% (7/16)
+Compressing objects:  50% (8/16)
+Compressing objects:  56% (9/16)
+Compressing objects:  62% (10/16)
+Compressing objects:  68% (11/16)
+Compressing objects:  75% (12/16)
+Compressing objects:  81% (13/16)
+Compressing objects:  87% (14/16)
+Compressing objects:  93% (15/16)
+Compressing objects: 100% (16/16)
+Compressing objects: 100% (16/16), done.
+Writing objects:   5% (1/18)
+Writing objects:  11% (2/18)
+Writing objects:  16% (3/18)
+Writing objects:  22% (4/18)
+Writing objects:  27% (5/18)
+Writing objects:  33% (6/18)
+Writing objects:  38% (7/18)
+Writing objects:  44% (8/18)
+Writing objects:  50% (9/18)
+Writing objects:  55% (10/18)
+Writing objects:  61% (11/18)
+Writing objects:  66% (12/18)
+Writing objects:  72% (13/18)
+Writing objects:  77% (14/18)
+Writing objects:  83% (15/18)
+Writing objects:  88% (16/18)
+Writing objects:  94% (17/18)
+Writing objects: 100% (18/18)
+Writing objects: 100% (18/18), 169.03 KiB | 9.94 MiB/s, done.
 Total 18 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Igorantivirus/Eltex-practices-Igor.git
    9b5061c..ff7e949  main -> main
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# cd ..
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~root@eltex-practice2-pg2-v4:~# mkdir clone;cd clone
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/cloneroot@eltex-practice2-pg2-v4:~/clone# git clone [K[K[K[K[K[K[K[K[K[K[7mgit clone https://github.com/твой-username/Eltex-practices-Igor.git .[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone https://github.com/твой-username/Eltex-practices-Igor.git .
-[?2004lCloning into '.'...
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# cd ..
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~ root@eltex-practice2-pg2-v4:~# mkdir clone;cd clone
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/clone root@eltex-practice2-pg2-v4:~/clone# git clone [K[K[K[K[K[K[K[K[K[K    [7mgit clone https://github.com/твой-username/Eltex-practices-Igor.git .[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone https://github.com/твой-username/Eltex-practices-Igor.git .
+[?2004l
+Cloning into '.'...
 remote: Repository not found.
 fatal: repository 'https://github.com/твой-username/Eltex-practices-Igor.git/' not found
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/cloneroot@eltex-practice2-pg2-v4:~/clone# git clone https://github.com/твой-username/Eltex-practices-Igor.git .[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@I[1@g[1@o[1@r[1@a[1@n[1@t[1@i[1@v[1@i[1@r[1@u[1@s
-[?2004lCloning into '.'...
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/clone root@eltex-practice2-pg2-v4:~/clone# git clone https://github.com/твой-username/Eltex-practices-Igor.git .[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@I[1@g[1@o[1@r[1@a[1@n[1@t[1@i[1@v[1@i[1@r[1@u[1@s
+[?2004l
+Cloning into '.'...
 remote: Enumerating objects: 21, done.[K
-remote: Counting objects:   4% (1/21)[Kremote: Counting objects:   9% (2/21)[Kremote: Counting objects:  14% (3/21)[Kremote: Counting objects:  19% (4/21)[Kremote: Counting objects:  23% (5/21)[Kremote: Counting objects:  28% (6/21)[Kremote: Counting objects:  33% (7/21)[Kremote: Counting objects:  38% (8/21)[Kremote: Counting objects:  42% (9/21)[Kremote: Counting objects:  47% (10/21)[Kremote: Counting objects:  52% (11/21)[Kremote: Counting objects:  57% (12/21)[Kremote: Counting objects:  61% (13/21)[Kremote: Counting objects:  66% (14/21)[Kremote: Counting objects:  71% (15/21)[Kremote: Counting objects:  76% (16/21)[Kremote: Counting objects:  80% (17/21)[Kremote: Counting objects:  85% (18/21)[Kremote: Counting objects:  90% (19/21)[Kremote: Counting objects:  95% (20/21)[Kremote: Counting objects: 100% (21/21)[Kremote: Counting objects: 100% (21/21), done.[K
-remote: Compressing objects:   5% (1/18)[Kremote: Compressing objects:  11% (2/18)[Kremote: Compressing objects:  16% (3/18)[Kremote: Compressing objects:  22% (4/18)[Kremote: Compressing objects:  27% (5/18)[Kremote: Compressing objects:  33% (6/18)[Kremote: Compressing objects:  38% (7/18)[Kremote: Compressing objects:  44% (8/18)[Kremote: Compressing objects:  50% (9/18)[Kremote: Compressing objects:  55% (10/18)[Kremote: Compressing objects:  61% (11/18)[Kremote: Compressing objects:  66% (12/18)[Kremote: Compressing objects:  72% (13/18)[Kremote: Compressing objects:  77% (14/18)[Kremote: Compressing objects:  83% (15/18)[Kremote: Compressing objects:  88% (16/18)[Kremote: Compressing objects:  94% (17/18)[Kremote: Compressing objects: 100% (18/18)[Kremote: Compressing objects: 100% (18/18), done.[K
-Receiving objects:   4% (1/21)Receiving objects:   9% (2/21)Receiving objects:  14% (3/21)Receiving objects:  19% (4/21)Receiving objects:  23% (5/21)Receiving objects:  28% (6/21)Receiving objects:  33% (7/21)Receiving objects:  38% (8/21)Receiving objects:  42% (9/21)Receiving objects:  47% (10/21)Receiving objects:  52% (11/21)Receiving objects:  57% (12/21)Receiving objects:  61% (13/21)Receiving objects:  66% (14/21)Receiving objects:  71% (15/21)Receiving objects:  76% (16/21)Receiving objects:  80% (17/21)remote: Total 21 (delta 0), reused 21 (delta 0), pack-reused 0 (from 0)[K
-Receiving objects:  85% (18/21)Receiving objects:  90% (19/21)Receiving objects:  95% (20/21)Receiving objects: 100% (21/21)Receiving objects: 100% (21/21), 169.34 KiB | 893.00 KiB/s, done.
-[?2004h]0;root@eltex-practice2-pg2-v4: ~/cloneroot@eltex-practice2-pg2-v4:~/clone# [7mcd ~/Eltex-practices-Igor[27mcd ~/Eltex-practices-Igor
-[?2004l[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igorroot@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# nano README.md 
-[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;54H(B[0;7m[ Reading... ](B[m[54;53H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 7.2                                            README.md                                                      [1;120H(B[m[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d(B[0;1m[33m# Github репозиторий для второй практики[4d[39m(B[mАнтипов Игорь, 2-ая подгруппа, 4-ый вариант.[6deltex-practice2-pg2-v4[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[7d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;69H(B[0;7m*[120G(B[m[8d[?12l[?25h[?25l[?12l[?25h(B[0;1m[33m#[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mС[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[54d[K[?12l[?25h[8;5H(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mа[39m(B[m[?25l[?12l[?25h(B[0;1m[33m:[39m(B[m[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[?12l[?25h1[?25l[?12l[?25h)[?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25ho[?25l[?12l[?25hd[?25l[?12l[?25hu[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25h-[?25l[?12l[?25h [?25l[?12l[?25hп[?25l[?12l[?25hе[?25l[?12l[?25hр[?25l[?12l[?25hв[?25l[?12l[?25hы[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hм[?25l[?12l[?25hо[?25l[?12l[?25hлд[?25l[?12l[?25hу[?25l[?12l[?25hл[?25l[?12l[?25hь[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [
+remote: Counting objects:   4% (1/21)[K
+remote: Counting objects:   9% (2/21)[K
+remote: Counting objects:  14% (3/21)[K
+remote: Counting objects:  19% (4/21)[K
+remote: Counting objects:  23% (5/21)[K
+remote: Counting objects:  28% (6/21)[K
+remote: Counting objects:  33% (7/21)[K
+remote: Counting objects:  38% (8/21)[K
+remote: Counting objects:  42% (9/21)[K
+remote: Counting objects:  47% (10/21)[K
+remote: Counting objects:  52% (11/21)[K
+remote: Counting objects:  57% (12/21)[K
+remote: Counting objects:  61% (13/21)[K
+remote: Counting objects:  66% (14/21)[K
+remote: Counting objects:  71% (15/21)[K
+remote: Counting objects:  76% (16/21)[K
+remote: Counting objects:  80% (17/21)[K
+remote: Counting objects:  85% (18/21)[K
+remote: Counting objects:  90% (19/21)[K
+remote: Counting objects:  95% (20/21)[K
+remote: Counting objects: 100% (21/21)[K
+remote: Counting objects: 100% (21/21), done.[K
+remote: Compressing objects:   5% (1/18)[K
+remote: Compressing objects:  11% (2/18)[K
+remote: Compressing objects:  16% (3/18)[K
+remote: Compressing objects:  22% (4/18)[K
+remote: Compressing objects:  27% (5/18)[K
+remote: Compressing objects:  33% (6/18)[K
+remote: Compressing objects:  38% (7/18)[K
+remote: Compressing objects:  44% (8/18)[K
+remote: Compressing objects:  50% (9/18)[K
+remote: Compressing objects:  55% (10/18)[K
+remote: Compressing objects:  61% (11/18)[K
+remote: Compressing objects:  66% (12/18)[K
+remote: Compressing objects:  72% (13/18)[K
+remote: Compressing objects:  77% (14/18)[K
+remote: Compressing objects:  83% (15/18)[K
+remote: Compressing objects:  88% (16/18)[K
+remote: Compressing objects:  94% (17/18)[K
+remote: Compressing objects: 100% (18/18)[K
+remote: Compressing objects: 100% (18/18), done.[K
+Receiving objects:   4% (1/21)
+Receiving objects:   9% (2/21)
+Receiving objects:  14% (3/21)
+Receiving objects:  19% (4/21)
+Receiving objects:  23% (5/21)
+Receiving objects:  28% (6/21)
+Receiving objects:  33% (7/21)
+Receiving objects:  38% (8/21)
+Receiving objects:  42% (9/21)
+Receiving objects:  47% (10/21)
+Receiving objects:  52% (11/21)
+Receiving objects:  57% (12/21)
+Receiving objects:  61% (13/21)
+Receiving objects:  66% (14/21)
+Receiving objects:  71% (15/21)
+Receiving objects:  76% (16/21)
+Receiving objects:  80% (17/21)
+remote: Total 21 (delta 0), reused 21 (delta 0), pack-reused 0 (from 0)[K
+Receiving objects:  85% (18/21)
+Receiving objects:  90% (19/21)
+Receiving objects:  95% (20/21)
+Receiving objects: 100% (21/21)
+Receiving objects: 100% (21/21), 169.34 KiB | 893.00 KiB/s, done.
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/clone root@eltex-practice2-pg2-v4:~/clone# [7mcd ~/Eltex-practices-Igor[27mcd ~/Eltex-practices-Igor
+[?2004l
+[?2004h]0;root@eltex-practice2-pg2-v4: ~/Eltex-practices-Igor root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# nano README.md 
+[?2004l
+[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;54H(B[0;7m[ Reading... ](B[m[54;53H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 7.2                                            README.md                                                      [1;120H(B[m
+[55d(B[0;7m^G(B[m Help[55;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[55;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark
+[56d(B[0;7m^X(B[m Exit[56;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy
+[2d(B[0;1m[33m# Github репозиторий для второй практики
+[4d[39m(B[mАнтипов Игорь, 2-ая подгруппа, 4-ый вариант.
+[6deltex-practice2-pg2-v4
+[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[7d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;69H(B[0;7m*[120G(B[m
+[8d[?12l[?25h[?25l[?12l[?25h(B[0;1m[33m#[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mС[39m(B[m[?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l
+[54d[K[?12l[?25h[8;5H(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h(B[0;1m[33mк[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h(B[0;1m[33mт[39m(B[m[?25l[?12l[?25h(B[0;1m[33mу[39m(B[m[?25l[?12l[?25h(B[0;1m[33mр[39m(B[m[?25l[?12l[?25h(B[0;1m[33mа[39m(B[m[?25l[?12l[?25h(B[0;1m[33m:[39m(B[m[?25l
+[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[?12l[?25h1[?25l[?12l[?25h)[?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25ho[?25l[?12l[?25hd[?25l[?12l[?25hu[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25h-[?25l[?12l[?25h [?25l[?12l[?25hп[?25l[?12l[?25hе[?25l[?12l[?25hр[?25l[?12l[?25hв[?25l[?12l[?25hы[?25l[?12l[?25hй[?25l[?12l[?25h [?25l[?12l[?25hм[?25l[?12l[?25hо[?25l[?12l[?25hлд[?25l[?12l[?25hу[?25l[?12l[?25hл[?25l[?12l[?25hь[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [
+
+
+
+
+
+
+
+root@eltex-practice2-pg2-v4:~/clone# cd /root/Eltex-practices-Igor
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git pull --ff-only
+Already up to date.
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# date -Is >> module1/task2/adds/git_sync_check.txt
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git add module1/task2/adds/git_sync_check.txt
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git commit -m "Проверка обновления клона"
+[main 143d0b9] Проверка обновления клона
+ 1 file changed, 1 insertion(+)
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 550 bytes | 550.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Igorantivirus/Eltex-practices-Igor.git
+   90422f3..143d0b9  main -> main
+root@eltex-practice2-pg2-v4:~/Eltex-practices-Igor# cd /root/clone
+root@eltex-practice2-pg2-v4:~/clone# git fetch origin
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 2), reused 6 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 530 bytes | 530.00 KiB/s, done.
+From https://github.com/Igorantivirus/Eltex-practices-Igor
+   90422f3..143d0b9  main       -> origin/main
+root@eltex-practice2-pg2-v4:~/clone# git --no-pager log -3 --oneline origin/main
+143d0b9 (origin/main, origin/HEAD) Проверка обновления клона
+90422f3 (HEAD -> main) Проверка обновления клона
+6acca8d Обновлён README
+root@eltex-practice2-pg2-v4:~/clone# git diff main origin/main > /root/git_diff_check.txt
+root@eltex-practice2-pg2-v4:~/clone# git --no-pager diff --stat main origin/main
+ module1/task2/adds/git_sync_check.txt | 1 +
+ 1 file changed, 1 insertion(+)
+root@eltex-practice2-pg2-v4:~/clone# git merge --ff-only origin/main
+Updating 90422f3..143d0b9
+Fast-forward
+ module1/task2/adds/git_sync_check.txt | 1 +
+ 1 file changed, 1 insertion(+)
+root@eltex-practice2-pg2-v4:~/clone# git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+root@eltex-practice2-pg2-v4:~/clone# cp /root/git_diff_check.txt /root/Eltex-practices-Igor/module1/task2/adds/
+root@eltex-practice2-pg2-v4:~/clone#
