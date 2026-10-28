@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 #include <calc/CalcTree.h>
 #include <parse/Parser.h>

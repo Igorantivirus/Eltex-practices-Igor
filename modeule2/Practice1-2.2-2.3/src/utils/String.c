@@ -59,7 +59,7 @@ String sInitCharArray(const char *const string)
 String sInitString(const String *const other)
 {
     String res = sInitEmpty();
-    if (!other)
+    if (!other || other->size == 0)
         return res;
     res.size = other->size;
     res.capacity = other->capacity;

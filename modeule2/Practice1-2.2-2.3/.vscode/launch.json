@@ -28,6 +28,38 @@
           "hidden": true
         }
       }
+    },
+    {
+      "name": "CMake: Debug Tests (Linux)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${cmake.testProgram}",
+      "cwd": "${cmake.testWorkingDirectory}",
+      "args": [
+        "${cmake.testArgs}"
+      ],
+      "console": "integratedTerminal",
+      "windows": {
+        "presentation": {
+          "hidden": true
+        }
+      }
+    },
+    {
+      "name": "CMake: Debug Tests (Windows)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${cmake.testProgram}",
+      "cwd": "${cmake.testWorkingDirectory}",
+      "args": [
+        "${cmake.testArgs}"
+      ],
+      "console": "integratedTerminal",
+      "linux": {
+        "presentation": {
+          "hidden": true
+        }
+      }
     }
   ]
 }
