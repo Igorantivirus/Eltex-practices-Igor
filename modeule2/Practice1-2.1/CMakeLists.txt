@@ -83,6 +83,16 @@ if(BUILD_TESTING)
     endfunction()
 
     add_unity_test(string_test
-        src/tests/String.c
+        src/tests/utils/String.c
+    )
+    add_unity_test(dynamic_array_test
+        src/tests/utils/DynamicArray.c
+    )
+
+    add_unity_test(contact_test
+        src/tests/teleboock/Contact.c
+    )
+    add_unity_test(teleboock_test
+        src/tests/teleboock/Teleboock.c
     )
 endif()
