@@ -24,7 +24,7 @@ void testParseRWXFormat(void)
     TEST_ASSERT_EQUAL_UINT32(mode, 0644);
 
     TEST_ASSERT_EQUAL_INT(ModeParseResultOk, interpStringToMode(svFromChars("rw-r----x"), &mode));
-    TEST_ASSERT_EQUAL_UINT32(mode, 0651);
+    TEST_ASSERT_EQUAL_UINT32(mode, 0641);
 
     TEST_ASSERT_EQUAL_INT(ModeParseResultOk, interpStringToMode(svFromChars("---------"), &mode));
     TEST_ASSERT_EQUAL_UINT32(mode, 0);
@@ -32,8 +32,7 @@ void testParseRWXFormat(void)
     TEST_ASSERT_EQUAL_INT(ModeParseResultOk, interpStringToMode(svFromChars("r--r--r--"), &mode));
     TEST_ASSERT_EQUAL_UINT32(mode, 0444);
 
-    TEST_ASSERT_EQUAL_INT(ModeParseResultOk, interpStringToMode(svFromChars("r-----x-x"), &mode));
-    TEST_ASSERT_EQUAL_UINT32(mode, 0511);
+    TEST_ASSERT_EQUAL_INT(ModeParseResultError, interpStringToMode(svFromChars("r-----x-x"), &mode));
 }
 
 void testParseOctalFormat(void)
@@ -70,7 +69,6 @@ void testParseErrors(void)
     // Некорректная длина
     TEST_ASSERT_EQUAL_INT(ModeParseResultError, interpStringToMode(svFromChars("75"), &mode));
     TEST_ASSERT_EQUAL_INT(ModeParseResultError, interpStringToMode(svFromChars("7555"), &mode));
-    TEST_ASSERT_EQUAL_INT(ModeParseResultError, interpStringToMode(svFromChars("rw-r--r-x"), &mode));
     TEST_ASSERT_EQUAL_INT(ModeParseResultError, interpStringToMode(svFromChars("rw-r--r-x-"), &mode));
 
     // Окталия: буквы вместо цифр (в т.ч. "rwx" — это не RWX-запись)

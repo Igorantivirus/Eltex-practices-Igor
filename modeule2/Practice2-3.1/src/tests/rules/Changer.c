@@ -1,4 +1,5 @@
 #include <rules/Changer.h>
+#include <stdio.h>
 #include <utils/StringView.h>
 
 #include "unity.h"
@@ -46,7 +47,8 @@ void testChangeModeSymbolAdd(void)
 
     // Пустой блок категорий — 'a'
     TEST_ASSERT_TRUE(apply(0644, "+r", &mode));
-    TEST_ASSERT_EQUAL_UINT32(mode, 0755);
+    printf("Result: %03o\n", mode);
+    TEST_ASSERT_EQUAL_UINT32(mode, 0644);
 
     // Конкатенация прав: +rw
     TEST_ASSERT_TRUE(apply(0000, "+rw", &mode));
@@ -96,7 +98,7 @@ void testChangeModeCommaList(void)
 
     // Команды выполняются слева направо
     TEST_ASSERT_TRUE(apply(0644, "u+w,g-w", &mode));
-    TEST_ASSERT_EQUAL_UINT32(mode, 0744);
+    TEST_ASSERT_EQUAL_UINT32(mode, 0644);
 
     TEST_ASSERT_TRUE(apply(0000, "u+rwx,g+rx,o+x", &mode));
     TEST_ASSERT_EQUAL_UINT32(mode, 0751);
@@ -123,7 +125,8 @@ void testChangeModeErrors(void)
     TEST_ASSERT_FALSE(apply(0755, "u", &mode));
 
     // Пустой блок прав для "=" не допустим
-    TEST_ASSERT_FALSE(apply(0755, "u=", &mode));
+    bool res = apply(0755, "u=", &mode);
+    TEST_ASSERT_FALSE(res);
 
     // Не-восьмеричные "числовые" аргументы
     TEST_ASSERT_FALSE(apply(0755, "999", &mode));

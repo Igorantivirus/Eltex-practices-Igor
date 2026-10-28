@@ -18,7 +18,6 @@ static mode_t parseMode(const char *const s)
     return mode;
 }
 
-
 void setUp(void)
 {
 }
@@ -34,8 +33,8 @@ void testFullCycleRoundTrip(void)
     TEST_ASSERT_EQUAL_STRING("rwxrwxrwx", modeToStringRWX(parseMode("rwxrwxrwx")).mode);
 
     // RWX-запись -> окт.-строка
-    TEST_ASSERT_EQUAL_STRING("644", modeToStringRWX(parseMode("644")).mode);
-    TEST_ASSERT_EQUAL_STRING("755", modeToStringRWX(parseMode("755")).mode);
+    TEST_ASSERT_EQUAL_INT(420, parseMode("644"));
+    TEST_ASSERT_EQUAL_INT(493, parseMode("755"));
 
     // Битовое представление
     TEST_ASSERT_EQUAL_STRING("110100100", modeToStringBin(parseMode("rw-r--r--")).mode);
@@ -53,8 +52,8 @@ void testFullCycleChangeAfterParse(void)
     // Символьная команда поверх разобранных прав с очисткой
     mode = parseMode("755");
     TEST_ASSERT_TRUE(changeMode(&mode, svFromChars("u=rw,o-rwx,g=rx")));
-    TEST_ASSERT_EQUAL_STRING("rw-r-xr-x", modeToStringRWX(mode).mode);
-    TEST_ASSERT_EQUAL_UINT32(mode, 0655);
+    TEST_ASSERT_EQUAL_STRING("rw-r-x---", modeToStringRWX(mode).mode);
+    TEST_ASSERT_EQUAL_UINT32(mode, 0650);
 }
 
 void testFullCycleChangeThenRepaint(void)

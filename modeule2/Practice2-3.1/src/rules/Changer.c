@@ -59,7 +59,8 @@ static int nextSubArg(mode_t *mode, StringView sv, int start)
         rwx_mask |= (c == 'r' ? 4 : (c == 'w' ? 2 : 1));
         ++pos;
     }
-
+    if(rwx_mask == 0)
+        return -1;
     mode_t effect = (rwx_mask | (rwx_mask << 3) | (rwx_mask << 6)) & ugoa_mask;
 
     if (oper == '+')
