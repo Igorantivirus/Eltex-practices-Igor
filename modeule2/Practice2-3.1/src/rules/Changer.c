@@ -75,7 +75,6 @@ static int nextSubArg(mode_t *mode, StringView sv, int start)
 static void numberMask(mode_t *mode, const char *const str)
 {
     mode_t mask = ((str[0] - '0') << 6) & ((str[1] - '0') << 3) & (str[2] - '0');
-
 }
 
 bool changeMode(mode_t *mode, StringView arg)

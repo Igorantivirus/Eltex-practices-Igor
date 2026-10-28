@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(RulersChanger VERSION 0.1.0 LANGUAGES C)
+project(rch VERSION 0.1.0 LANGUAGES C)
 
 # Применяется ко всем нашим целям.
 set(ALL_TARGETS_PROPERTIES
