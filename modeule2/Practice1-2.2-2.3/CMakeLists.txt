@@ -35,6 +35,9 @@ target_include_directories(${CORE_NAME} PUBLIC
 set_target_properties(${CORE_NAME} PROPERTIES
     ${ALL_TARGETS_PROPERTIES}
 )
+target_link_libraries(${CORE_NAME} PRIVATE
+    $<$<NOT:$<C_COMPILER_ID:MSVC>>:m>
+)
 
 # =================================================== #
 # =================== ПРИЛОЖЕНИЕ ==================== #

@@ -1,2 +1,2 @@
 CompileFlags:
-    CompilationDatabase: build/msvc-windows-static/
+    CompilationDatabase: build/gnu-linux-make-debug
