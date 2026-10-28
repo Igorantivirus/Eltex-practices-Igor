@@ -1,21 +1,43 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(Tests VERSION 0.1.0 LANGUAGES C)
+project(Teleboock VERSION 0.1.0 LANGUAGES C)
+
+# Применяется ко всем нашим целям.
+set(ALL_TARGETS_PROPERTIES
+    C_STANDARD 23
+    C_STANDARD_REQUIRED ON
+    C_EXTENSIONS OFF
+)
 
 # =================================================== #
-# ==================== НАСТРОЙКА ==================== #
+# ================== Ядро проекта =================== #
 # =================================================== #
 
-set(EXECUTABLE_NAME ${PROJECT_NAME})
+set(CORE_NAME "${PROJECT_NAME}_core")
 
-set(CPP_FILES
-    src/main.c
-
+add_library(${CORE_NAME} STATIC
     src/utils/String.c
     src/utils/DynamicArray.c
 
     src/teleboock/Contact.c
     src/teleboock/Teleboock.c
+)
+
+target_include_directories(${CORE_NAME} PUBLIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+set_target_properties(${CORE_NAME} PROPERTIES
+    ${ALL_TARGETS_PROPERTIES}
+)
+
+# =================================================== #
+# =================== ПРИЛОЖЕНИЕ ==================== #
+# =================================================== #
+
+set(EXECUTABLE_NAME ${PROJECT_NAME})
+
+add_executable(${EXECUTABLE_NAME}
+    src/main.c
 
     src/ui/menu/ElementMenu.c
     src/ui/menu/InputOutput.c
@@ -26,26 +48,41 @@ set(CPP_FILES
     src/ui/MainMenu.c
 )
 
-# =================================================== #
-# ============ ПОДКЛЮЧЕНИЕ ЗАВИСИМОСТЕЙ ============= #
-# =================================================== #
-
-# =================================================== #
-# =============== СОЗДАНИЕ БИНАРНИКОВ =============== #
-# =================================================== #
-
-add_executable(${EXECUTABLE_NAME} ${CPP_FILES})
-
-# =================================================== #
-# ================= TARGET НАСТРОЙКА ================ #
-# =================================================== #
-
-set_target_properties(${EXECUTABLE_NAME} PROPERTIES
-    C_STANDARD 23
-    C_STANDARD_REQUIRED ON
-    C_EXTENSIONS OFF
+target_link_libraries(${EXECUTABLE_NAME} PRIVATE
+    ${CORE_NAME}
 )
 
-target_include_directories(${EXECUTABLE_NAME} PUBLIC
-    "include/"
-)
+# =================================================== #
+# ====================== ТЕСТЫ ====================== #
+# =================================================== #
+
+set(TESTING_NAME "${PROJECT_NAME}_tests")
+
+include(CTest)
+
+if(BUILD_TESTING)
+    include(FetchContent)
+
+    FetchContent_Declare(
+        unity
+        URL https://github.com/ThrowTheSwitch/Unity/archive/refs/tags/v2.7.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    )
+
+    FetchContent_MakeAvailable(unity)
+
+    function(add_unity_test test_name)
+        add_executable(${test_name} ${ARGN})
+
+        target_link_libraries(${test_name} PRIVATE
+            ${CORE_NAME}
+            unity
+        )
+
+        add_test(NAME ${test_name} COMMAND ${test_name})
+    endfunction()
+
+    add_unity_test(string_test
+        src/tests/String.c
+    )
+endif()
