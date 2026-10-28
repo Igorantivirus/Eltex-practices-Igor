@@ -12,3 +12,4 @@ typedef struct
 
 double svToDouble(StringView sv);
 StringView svFromString(const String str);
+StringView svFromCharsArray(char* const str);

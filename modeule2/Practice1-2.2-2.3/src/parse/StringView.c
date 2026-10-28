@@ -21,3 +21,10 @@ StringView svFromString(const String str)
     sv.size = str.size;
     return sv;
 }
+StringView svFromCharsArray(char* const str)
+{
+    StringView sv;
+    sv.str = str;
+    sv.size = strlen(str);
+    return sv;
+}

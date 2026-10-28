@@ -26,6 +26,8 @@ void nodeFree(Node *node, CallTreeAdditionalInfo *info)
 }
 double nodeCalc(Node *node, CallTreeAdditionalInfo *const info)
 {
+    if(!node)
+        return nan("");
     NodeCallBacks *ncb = (NodeCallBacks *)btGetAt(&info->callBacks, &node->type);
     if (!ncb)
         return nan("");
