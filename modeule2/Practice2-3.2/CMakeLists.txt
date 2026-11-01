@@ -55,53 +55,49 @@ target_link_libraries(${EXECUTABLE_NAME} PRIVATE
 # ====================== ТЕСТЫ ====================== #
 # =================================================== #
 
-# set(TESTING_NAME "${PROJECT_NAME}_tests")
+set(TESTING_NAME "${PROJECT_NAME}_tests")
 
-# include(CTest)
+include(CTest)
 
-# if(BUILD_TESTING)
-#     include(FetchContent)
+if(BUILD_TESTING)
+    include(FetchContent)
 
-#     FetchContent_Declare(
-#         unity
-#         URL https://github.com/ThrowTheSwitch/Unity/archive/refs/tags/v2.7.0.zip
-#         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-#     )
+    FetchContent_Declare(
+        unity
+        URL https://github.com/ThrowTheSwitch/Unity/archive/refs/tags/v2.7.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    )
 
-#     FetchContent_MakeAvailable(unity)
+    FetchContent_MakeAvailable(unity)
 
-#     target_compile_definitions(unity PUBLIC UNITY_INCLUDE_DOUBLE)
+    target_compile_definitions(unity PUBLIC UNITY_INCLUDE_DOUBLE)
 
-#     function(add_unity_test test_name)
-#         add_executable(${test_name} ${ARGN})
+    function(add_unity_test test_name)
+        add_executable(${test_name} ${ARGN})
 
-#         target_link_libraries(${test_name} PRIVATE
-#             ${CORE_NAME}
-#             unity
-#         )
+        target_link_libraries(${test_name} PRIVATE
+            ${CORE_NAME}
+            unity
+        )
 
-#         add_test(NAME ${test_name} COMMAND ${test_name})
-#     endfunction()
+        add_test(NAME ${test_name} COMMAND ${test_name})
+    endfunction()
 
-#     add_unity_test(string_test
-#         src/tests/utils/String.c
-#     )
-#     add_unity_test(dynamic_array_test
-#         src/tests/utils/DynamicArray.c
-#     )
+    add_unity_test(rand_test
+        src/tests/utils/Rand.c
+    )
 
-#     add_unity_test(mode_parse_test
-#         src/tests/rules/ModeParse.c
-#     )
-#     add_unity_test(mode_string_test
-#         src/tests/rules/ModeString.c
-#     )
-#     add_unity_test(mode_changer_test
-#         src/tests/rules/Changer.c
-#     )
+    add_unity_test(parser_test
+        src/tests/ui/Parser.c
+    )
+    add_unity_test(input_args_test
+        src/tests/ui/InputArgs.c
+    )
+    add_unity_test(commands_test
+        src/tests/ui/Commands.c
+    )
 
-#     # Полный цикл: разбор прав -> представления -> изменение
-#     add_unity_test(mode_full_test
-#         src/tests/ModeTest.c
-#     )
-# endif()
+    add_unity_test(statistick_test
+        src/tests/stat/Statistick.c
+    )
+endif()

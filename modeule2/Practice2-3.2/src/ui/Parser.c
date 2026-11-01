@@ -1,6 +1,5 @@
 #include <stdint.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include <ui/Parser.h>
 
@@ -8,6 +7,8 @@
 
 bool parseUInt32(const char *arg, uint32_t *val)
 {
+    if(!arg || *arg == '\0')
+        return false;
     char              *end;
     unsigned long long input = strtoull(arg, &end, 10);
     if (*end != '\0' || input > (unsigned long long)UINT32_MAX)
@@ -55,6 +56,6 @@ bool parseIp(const char *str, uint32_t *ip, const char **end)
 
     if (end)
         *end = p;
-    memcpy(ip, ipRes, sizeof(ipRes));
+    *ip = ((ipRes[0] << 24u) | (ipRes[1] << 16u) | (ipRes[2] << 8) | ipRes[3]);
     return true;
 }
