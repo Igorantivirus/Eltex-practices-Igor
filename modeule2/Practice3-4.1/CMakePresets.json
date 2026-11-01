@@ -1,0 +1,194 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "msvc-base",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl"
+      },
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" }
+    },
+    {
+      "name": "msvc-ninja-base",
+      "hidden": true,
+      "inherits": "msvc-base",
+      "generator": "Ninja Multi-Config",
+      "cacheVariables": {
+        "CMAKE_DEFAULT_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "msvc-windows-dynamic",
+      "inherits": "msvc-ninja-base",
+      "displayName": "MSVC Windows - Dynamic (MD Runtime, Ninja)",
+      "cacheVariables": {
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL$<$<CONFIG:Debug>:Debug>"
+      }
+    },
+    {
+      "name": "msvc-windows-static",
+      "inherits": "msvc-ninja-base",
+      "displayName": "MSVC Windows - Static (MT Runtime, Ninja)",
+      "cacheVariables": {
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      }
+    },
+
+
+    {
+      "name": "gnu-base",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "name": "gnu-ninja-base",
+      "hidden": true,
+      "inherits": "gnu-base",
+      "generator": "Ninja Multi-Config",
+      "cacheVariables": {
+        "CMAKE_DEFAULT_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "gnu-windows-dynamic",
+      "inherits": "gnu-ninja-base",
+      "displayName": "GNU Windows - Dynamic (Ninja)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "gnu-windows-static",
+      "inherits": "gnu-ninja-base",
+      "displayName": "GNU Windows - Static (Ninja)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "CMAKE_EXE_LINKER_FLAGS": "-static"
+      }
+    },
+    {
+      "name": "gnu-linux-dynamic",
+      "inherits": "gnu-ninja-base",
+      "displayName": "GNU Linux - Dynamic (Ninja)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "gnu-linux-static",
+      "inherits": "gnu-ninja-base",
+      "displayName": "GNU Linux - Static (Ninja)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      },
+      "cacheVariables": {
+        "CMAKE_EXE_LINKER_FLAGS": "-static-libgcc -static-libstdc++"
+      }
+    },
+
+    
+    {
+      "name": "gnu-make-base",
+      "hidden": true,
+      "inherits": "gnu-base",
+      "generator": "Unix Makefiles",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "gnu-linux-make-debug",
+      "inherits": "gnu-make-base",
+      "displayName": "GNU Linux - Debug (Make)",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "gnu-linux-make-release",
+      "inherits": "gnu-make-base",
+      "displayName": "GNU Linux - Release (Make)",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "gnu-linux-make-minsizerel",
+      "inherits": "gnu-make-base",
+      "displayName": "GNU Linux - MinSizeRel (Make)",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "MinSizeRel"
+      }
+    },
+    {
+      "name": "gnu-linux-make-relwithdebinfo",
+      "inherits": "gnu-make-base",
+      "displayName": "GNU Linux - RelWithDebInfo (Make)",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "Debug-msvc-windows-dynamic",         "displayName": "Debug - MSVC Windows Dynamic",         "configurePreset": "msvc-windows-dynamic", "configuration": "Debug" },
+    { "name": "Release-msvc-windows-dynamic",       "displayName": "Release - MSVC Windows Dynamic",       "configurePreset": "msvc-windows-dynamic", "configuration": "Release" },
+    { "name": "MinSizeRel-msvc-windows-dynamic",    "displayName": "MinSizeRel - MSVC Windows Dynamic",    "configurePreset": "msvc-windows-dynamic", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-msvc-windows-dynamic","displayName": "RelWithDebInfo - MSVC Windows Dynamic","configurePreset": "msvc-windows-dynamic", "configuration": "RelWithDebInfo" },
+
+    { "name": "Debug-msvc-windows-static",          "displayName": "Debug - MSVC Windows Static",          "configurePreset": "msvc-windows-static", "configuration": "Debug" },
+    { "name": "Release-msvc-windows-static",        "displayName": "Release - MSVC Windows Static",        "configurePreset": "msvc-windows-static", "configuration": "Release" },
+    { "name": "MinSizeRel-msvc-windows-static",     "displayName": "MinSizeRel - MSVC Windows Static",     "configurePreset": "msvc-windows-static", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-msvc-windows-static", "displayName": "RelWithDebInfo - MSVC Windows Static", "configurePreset": "msvc-windows-static", "configuration": "RelWithDebInfo" },
+
+
+    { "name": "Debug-gnu-windows-dynamic",        "displayName": "Debug - GNU Windows Dynamic",        "configurePreset": "gnu-windows-dynamic", "configuration": "Debug" },
+    { "name": "Release-gnu-windows-dynamic",      "displayName": "Release - GNU Windows Dynamic",      "configurePreset": "gnu-windows-dynamic", "configuration": "Release" },
+    { "name": "MinSizeRel-gnu-windows-dynamic",   "displayName": "MinSizeRel - GNU Windows Dynamic",   "configurePreset": "gnu-windows-dynamic", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-gnu-windows-dynamic","displayName": "RelWithDebInfo - GNU Windows Dynamic","configurePreset": "gnu-windows-dynamic", "configuration": "RelWithDebInfo" },
+
+    { "name": "Debug-gnu-windows-static",         "displayName": "Debug - GNU Windows Static",         "configurePreset": "gnu-windows-static", "configuration": "Debug" },
+    { "name": "Release-gnu-windows-static",       "displayName": "Release - GNU Windows Static",       "configurePreset": "gnu-windows-static", "configuration": "Release" },
+    { "name": "MinSizeRel-gnu-windows-static",    "displayName": "MinSizeRel - GNU Windows Static",    "configurePreset": "gnu-windows-static", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-gnu-windows-static","displayName": "RelWithDebInfo - GNU Windows Static","configurePreset": "gnu-windows-static", "configuration": "RelWithDebInfo" },
+
+    { "name": "Debug-gnu-linux-dynamic",          "displayName": "Debug - GNU Linux Dynamic",          "configurePreset": "gnu-linux-dynamic", "configuration": "Debug" },
+    { "name": "Release-gnu-linux-dynamic",        "displayName": "Release - GNU Linux Dynamic",        "configurePreset": "gnu-linux-dynamic", "configuration": "Release" },
+    { "name": "MinSizeRel-gnu-linux-dynamic",     "displayName": "MinSizeRel - GNU Linux Dynamic",     "configurePreset": "gnu-linux-dynamic", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-gnu-linux-dynamic", "displayName": "RelWithDebInfo - GNU Linux Dynamic", "configurePreset": "gnu-linux-dynamic", "configuration": "RelWithDebInfo" },
+
+    { "name": "Debug-gnu-linux-static",           "displayName": "Debug - GNU Linux Static",           "configurePreset": "gnu-linux-static", "configuration": "Debug" },
+    { "name": "Release-gnu-linux-static",         "displayName": "Release - GNU Linux Static",         "configurePreset": "gnu-linux-static", "configuration": "Release" },
+    { "name": "MinSizeRel-gnu-linux-static",      "displayName": "MinSizeRel - GNU Linux Static",      "configurePreset": "gnu-linux-static", "configuration": "MinSizeRel" },
+    { "name": "RelWithDebInfo-gnu-linux-static",  "displayName": "RelWithDebInfo - GNU Linux Static",  "configurePreset": "gnu-linux-static", "configuration": "RelWithDebInfo" },
+
+    { "name": "Debug-gnu-linux-make",             "displayName": "Debug - GNU Linux (Make)",           "configurePreset": "gnu-linux-make-debug" },
+    { "name": "Release-gnu-linux-make",           "displayName": "Release - GNU Linux (Make)",         "configurePreset": "gnu-linux-make-release" },
+    { "name": "MinSizeRel-gnu-linux-make",        "displayName": "MinSizeRel - GNU Linux (Make)",      "configurePreset": "gnu-linux-make-minsizerel" },
+    { "name": "RelWithDebInfo-gnu-linux-make",    "displayName": "RelWithDebInfo - GNU Linux (Make)",  "configurePreset": "gnu-linux-make-relwithdebinfo" }
+  ]
+}
