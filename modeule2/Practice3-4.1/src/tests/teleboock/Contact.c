@@ -62,10 +62,10 @@ void testContactPhonesNumbers(void)
     Contact c = makeContact();
 
     String phone = sInitCharArray("+71234567890");
-    daPushBack(&c.phonesNumbers, &phone);
+    slInsert(&c.phonesNumbers, &phone);
 
     TEST_ASSERT_EQUAL_UINT32(c.phonesNumbers.size, 1);
-    String *stored = daGetAt(&c.phonesNumbers, 0);
+    String *stored = slGetAt(&c.phonesNumbers, 0);
     TEST_ASSERT_EQUAL_STRING("+71234567890", stored->str);
 
     constFreeContact(&c);
@@ -76,10 +76,10 @@ void testContactEmails(void)
     Contact c = makeContact();
 
     String email = sInitCharArray("ivan@example.com");
-    daPushBack(&c.emails, &email);
+    slInsert(&c.emails, &email);
 
     TEST_ASSERT_EQUAL_UINT32(c.emails.size, 1);
-    String *stored = daGetAt(&c.emails, 0);
+    String *stored = slGetAt(&c.emails, 0);
     TEST_ASSERT_EQUAL_STRING("ivan@example.com", stored->str);
 
     constFreeContact(&c);
@@ -90,16 +90,16 @@ void testContactWebLinksAndProfiles(void)
     Contact c = makeContact();
 
     String link = sInitCharArray("https://github.com/ivan");
-    daPushBack(&c.webLinks, &link);
+    slInsert(&c.webLinks, &link);
 
     String profile = sInitCharArray("@ivan_telegram");
-    daPushBack(&c.profiles, &profile);
+    slInsert(&c.profiles, &profile);
 
     TEST_ASSERT_EQUAL_UINT32(c.webLinks.size, 1);
     TEST_ASSERT_EQUAL_UINT32(c.profiles.size, 1);
 
-    TEST_ASSERT_EQUAL_STRING("https://github.com/ivan", ((String *)daGetAt(&c.webLinks, 0))->str);
-    TEST_ASSERT_EQUAL_STRING("@ivan_telegram", ((String *)daGetAt(&c.profiles, 0))->str);
+    TEST_ASSERT_EQUAL_STRING("https://github.com/ivan", ((String *)slGetAt(&c.webLinks, 0))->str);
+    TEST_ASSERT_EQUAL_STRING("@ivan_telegram", ((String *)slGetAt(&c.profiles, 0))->str);
 
     constFreeContact(&c);
 }
@@ -115,10 +115,10 @@ void testContFree(void)
     TEST_ASSERT_TRUE(c.secondName.size == 0);
     TEST_ASSERT_TRUE(c.secondName.str == NULL);
     TEST_ASSERT_TRUE(c.phonesNumbers.size == 0);
-    TEST_ASSERT_TRUE(c.phonesNumbers.array_ == NULL);
-    TEST_ASSERT_TRUE(c.emails.array_ == NULL);
-    TEST_ASSERT_TRUE(c.webLinks.array_ == NULL);
-    TEST_ASSERT_TRUE(c.profiles.array_ == NULL);
+    TEST_ASSERT_TRUE(c.phonesNumbers.root == NULL);
+    TEST_ASSERT_TRUE(c.emails.root == NULL);
+    TEST_ASSERT_TRUE(c.webLinks.root == NULL);
+    TEST_ASSERT_TRUE(c.profiles.root == NULL);
 }
 
 void testContFreeWithFillData(void)
@@ -126,9 +126,9 @@ void testContFreeWithFillData(void)
     Contact c = makeContact();
 
     String phone = sInitCharArray("+70001112233");
-    daPushBack(&c.phonesNumbers, &phone);
+    slInsert(&c.phonesNumbers, &phone);
     String email = sInitCharArray("test@test.ru");
-    daPushBack(&c.emails, &email);
+    slInsert(&c.emails, &email);
 
     constFreeContact(&c);
 
@@ -137,8 +137,8 @@ void testContFreeWithFillData(void)
     TEST_ASSERT_TRUE(c.thirdName.str == NULL);
     TEST_ASSERT_TRUE(c.workPlace.str == NULL);
     TEST_ASSERT_TRUE(c.workPost.str == NULL);
-    TEST_ASSERT_TRUE(c.phonesNumbers.array_ == NULL);
-    TEST_ASSERT_TRUE(c.emails.array_ == NULL);
+    TEST_ASSERT_TRUE(c.phonesNumbers.root == NULL);
+    TEST_ASSERT_TRUE(c.emails.root == NULL);
 }
 
 int main(void)

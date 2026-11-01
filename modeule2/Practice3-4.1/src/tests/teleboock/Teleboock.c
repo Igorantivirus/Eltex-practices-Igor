@@ -25,13 +25,12 @@ void testTbInit(void)
     tbInit(&tb);
 
     TEST_ASSERT_EQUAL_UINT32(tb.oneElementSize, sizeof(Contact));
-    TEST_ASSERT_NOT_NULL(tb.freeFunction);
+    TEST_ASSERT_NOT_NULL(tb.elemDestructor);
     TEST_ASSERT_EQUAL_UINT32(tb.size, 0);
-    TEST_ASSERT_EQUAL_UINT32(tb.capacity, 0);
-    TEST_ASSERT_NULL(tb.array_);
+    TEST_ASSERT_NULL(tb.root);
 
     tbFree(&tb);
-    TEST_ASSERT_NULL(tb.array_);
+    TEST_ASSERT_NULL(tb.root);
 }
 
 void testTbAddAndGetContact(void)
@@ -40,10 +39,10 @@ void testTbAddAndGetContact(void)
     tbInit(&tb);
 
     Contact c = makeContact("Ivan", "Petrov");
-    daPushBack(&tb, &c);
+    slInsert(&tb, &c);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 1);
-    Contact *stored = daGetAt(&tb, 0);
+    Contact *stored = slGetAt(&tb, 0);
     TEST_ASSERT_EQUAL_STRING("Ivan", stored->firstName.str);
     TEST_ASSERT_EQUAL_STRING("Petrov", stored->secondName.str);
 
@@ -59,14 +58,14 @@ void testTbMultipleContacts(void)
     Contact c2 = makeContact("Anna", "Smirnova");
     Contact c3 = makeContact("Petr", "Volkov");
 
-    daPushBack(&tb, &c1);
-    daPushBack(&tb, &c2);
-    daPushBack(&tb, &c3);
+    slInsert(&tb, &c1);
+    slInsert(&tb, &c2);
+    slInsert(&tb, &c3);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 3);
-    TEST_ASSERT_EQUAL_STRING("Ivan", ((Contact *)daGetAt(&tb, 0))->firstName.str);
-    TEST_ASSERT_EQUAL_STRING("Anna", ((Contact *)daGetAt(&tb, 1))->firstName.str);
-    TEST_ASSERT_EQUAL_STRING("Petr", ((Contact *)daGetAt(&tb, 2))->firstName.str);
+    TEST_ASSERT_EQUAL_STRING("Anna", ((Contact *)slGetAt(&tb, 0))->firstName.str);
+    TEST_ASSERT_EQUAL_STRING("Ivan", ((Contact *)slGetAt(&tb, 1))->firstName.str);
+    TEST_ASSERT_EQUAL_STRING("Petr", ((Contact *)slGetAt(&tb, 2))->firstName.str);
 
     tbFree(&tb);
 }
@@ -80,15 +79,15 @@ void testTbRemoveContact(void)
     Contact c2 = makeContact("Anna", "Smirnova");
     Contact c3 = makeContact("Petr", "Volkov");
 
-    daPushBack(&tb, &c1);
-    daPushBack(&tb, &c2);
-    daPushBack(&tb, &c3);
+    slInsert(&tb, &c1);
+    slInsert(&tb, &c2);
+    slInsert(&tb, &c3);
 
-    daRemove(&tb, 1);
+    slRemove(&tb, 1);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 2);
-    TEST_ASSERT_EQUAL_STRING("Ivan", ((Contact *)daGetAt(&tb, 0))->firstName.str);
-    TEST_ASSERT_EQUAL_STRING("Petr", ((Contact *)daGetAt(&tb, 1))->firstName.str);
+    TEST_ASSERT_EQUAL_STRING("Anna", ((Contact *)slGetAt(&tb, 0))->firstName.str);
+    TEST_ASSERT_EQUAL_STRING("Petr", ((Contact *)slGetAt(&tb, 1))->firstName.str);
 
     tbFree(&tb);
 }
@@ -100,13 +99,13 @@ void testTbFree(void)
 
     Contact c1 = makeContact("Ivan", "Petrov");
     Contact c2 = makeContact("Anna", "Smirnova");
-    daPushBack(&tb, &c1);
-    daPushBack(&tb, &c2);
+    slInsert(&tb, &c1);
+    slInsert(&tb, &c2);
 
     tbFree(&tb);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 0);
-    TEST_ASSERT_TRUE(tb.array_ == NULL);
+    TEST_ASSERT_TRUE(tb.root == NULL);
 }
 
 int main(void)
