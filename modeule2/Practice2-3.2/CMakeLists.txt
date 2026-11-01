@@ -4,7 +4,7 @@ project(rch VERSION 0.1.0 LANGUAGES C)
 
 # Применяется ко всем нашим целям.
 set(ALL_TARGETS_PROPERTIES
-    C_STANDARD 23
+    C_STANDARD 17
     C_STANDARD_REQUIRED ON
     C_EXTENSIONS OFF
 )
@@ -13,26 +13,28 @@ set(ALL_TARGETS_PROPERTIES
 # ================== Ядро проекта =================== #
 # =================================================== #
 
-# set(CORE_NAME "${PROJECT_NAME}_core")
+set(CORE_NAME "${PROJECT_NAME}_core")
 
-# add_library(${CORE_NAME} STATIC
-#     src/utils/String.c
-#     src/utils/DynamicArray.c
-#     src/utils/BinTree.c
-#     src/utils/StringView.c
-#     src/utils/Arguments.c
+add_library(${CORE_NAME} STATIC
+    src/utils/Rand.c
+    src/utils/UInt32Array.c
 
-#     src/rules/ModeParse.c
-#     src/rules/ModeString.c
-#     src/rules/Changer.c
-# )
+    src/ui/InputArgs.c
+    src/ui/Parser.c
+    src/ui/Commands.c
 
-# target_include_directories(${CORE_NAME} PUBLIC
-#     "${CMAKE_CURRENT_SOURCE_DIR}/include"
-# )
-# set_target_properties(${CORE_NAME} PROPERTIES
-#     ${ALL_TARGETS_PROPERTIES}
-# )
+    src/stat/Statistick.c
+)
+
+target_include_directories(${CORE_NAME} PUBLIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+set_target_properties(${CORE_NAME} PROPERTIES
+    ${ALL_TARGETS_PROPERTIES}
+)
+target_link_libraries(${CORE_NAME} PRIVATE
+    $<$<NOT:$<C_COMPILER_ID:MSVC>>:m>
+)
 
 # =================================================== #
 # =================== ПРИЛОЖЕНИЕ ==================== #
@@ -44,9 +46,10 @@ add_executable(${EXECUTABLE_NAME}
     src/main.c
 )
 
-# target_link_libraries(${EXECUTABLE_NAME} PRIVATE
-#     $<$<NOT:$<C_COMPILER_ID:MSVC>>:m>
-# )
+target_link_libraries(${EXECUTABLE_NAME} PRIVATE
+    ${CORE_NAME}
+    $<$<NOT:$<C_COMPILER_ID:MSVC>>:m>
+)
 
 # =================================================== #
 # ====================== ТЕСТЫ ====================== #
