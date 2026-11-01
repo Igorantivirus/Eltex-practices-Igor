@@ -35,5 +35,6 @@ ArgsParseResult cmdInitArgsWithFree(int argc, char **argv, Commands cmds, void *
 ArgsParseResult cmdInitCount(const char *arg, void *context);
 ArgsParseResult cmdInitMask(const char *arg, void *context);
 ArgsParseResult cmdInitGateway(const char *arg, void *context);
+ArgsParseResult cmdInitSeed(const char *arg, void *context);
 
 const char *convertArgsParseResult(ArgsParseResult res);

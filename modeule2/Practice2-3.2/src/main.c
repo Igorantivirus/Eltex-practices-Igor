@@ -1,5 +1,7 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include <stat/Statistick.h>
 #include <ui/Commands.h>
@@ -16,7 +18,8 @@ int main(int argc, char **argv)
         3,
         "-c", "--count", cmdInitCount,
         "-m", "--mask", cmdInitMask,
-        "-g", "--gateway", cmdInitGateway);
+        "-g", "--gateway", cmdInitGateway,
+        "-s", "--seed", cmdInitSeed);
 
     ArgsParseResult res;
     if ((res = cmdInitArgsWithFree(argc, argv, cmds, &args)) != ArgsParseResultOk)
@@ -24,6 +27,11 @@ int main(int argc, char **argv)
         printf("Ошибка: %s\n", convertArgsParseResult(res));
         return EXIT_FAILURE;
     }
+
+    if (args.seedInputed)
+        srand(args.seed);
+    else
+        srand(time(NULL));
 
     Statistick st;
     if (!fillStatistick(args, &st))

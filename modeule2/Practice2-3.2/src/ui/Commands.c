@@ -125,6 +125,22 @@ ArgsParseResult cmdInitGateway(const char *arg, void *context)
     return ArgsParseResultOk;
 }
 
+ArgsParseResult cmdInitSeed(const char *arg, void *context)
+{
+    if (!context)
+        return ArgsParseResultDevError;
+    InputArgs *args = context;
+    if (args->seedInputed)
+        return ArgsParseResultDoubleInit;
+
+    uint32_t seed;
+    if (!parseUInt32(arg, &seed))
+        return ArgsParseResultInvalidArg;
+    args->seed = seed;
+    args->seedInputed = true;
+    return ArgsParseResultOk;
+}
+
 const char *convertArgsParseResult(ArgsParseResult res)
 {
     switch (res)

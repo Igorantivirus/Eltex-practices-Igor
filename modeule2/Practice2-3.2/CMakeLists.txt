@@ -4,7 +4,7 @@ project(rch VERSION 0.1.0 LANGUAGES C)
 
 # Применяется ко всем нашим целям.
 set(ALL_TARGETS_PROPERTIES
-    C_STANDARD 17
+    C_STANDARD 23
     C_STANDARD_REQUIRED ON
     C_EXTENSIONS OFF
 )

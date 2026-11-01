@@ -8,6 +8,7 @@ InputArgs iaInit(void)
     res.countInputed = false;
     res.maskInputed = false;
     res.gatewayInputed = false;
+    res.seedInputed = false;
     return res;
 }
 
