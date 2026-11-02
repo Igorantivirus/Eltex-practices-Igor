@@ -8,7 +8,7 @@
       "program": "${command:cmake.launchTargetPath}",
       "cwd": "${workspaceFolder}/cwd",
       "console": "integratedTerminal",
-      "args": [],
+      "args": ["-c", "1000", "-g", "192.168.1.1", "-m", "24"],
       "windows": {
         "presentation": {
           "hidden": true

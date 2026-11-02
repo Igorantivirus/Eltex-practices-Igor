@@ -89,6 +89,36 @@ void slRemove(SortedList *const self, const size_t index)
     free(node);
     --self->size;
 }
+void  slRemoveNoFree(SortedList *const self, const size_t index)
+{
+    if (!self || index >= self->size)
+        return;
+
+    SortedListNode *prev = NULL;
+    SortedListNode *node = self->root;
+    size_t          i = 0;
+
+    while (i != index && node)
+    {
+        prev = node;
+        node = node->next;
+        ++i;
+    }
+
+    if (i != index || !node)
+        return;
+
+    if (prev)
+        prev->next = node->next;
+    else
+        self->root = node->next;
+
+    if (node->next)
+        node->next->prev = prev;
+
+    free(node);
+    --self->size;
+}
 
 void slPopBack(SortedList *const self)
 {

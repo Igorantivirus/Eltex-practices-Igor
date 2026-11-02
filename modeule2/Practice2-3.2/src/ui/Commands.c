@@ -92,9 +92,9 @@ ArgsParseResult cmdInitMask(const char *arg, void *context)
         args->maskInputed = true;
         return ArgsParseResultOk;
     }
-    if (!parseUInt32(arg, &mask))
+    if (!parseUInt32(arg, &mask) || mask > 32)
         return ArgsParseResultInvalidArg;
-    args->mask = mask;
+    args->mask = (~0u) << (32 - mask);
     args->maskInputed = true;
     return ArgsParseResultOk;
 }
@@ -118,9 +118,9 @@ ArgsParseResult cmdInitGateway(const char *arg, void *context)
         return ArgsParseResultOk;
 
     uint32_t mask;
-    if (!parseUInt32(end + 1, &mask))
+    if (!parseUInt32(end + 1, &mask) || mask > 32)
         return ArgsParseResultInvalidArg;
-    args->mask = mask;
+    args->mask = (~0u) << (32 - mask);
     args->maskInputed = true;
     return ArgsParseResultOk;
 }

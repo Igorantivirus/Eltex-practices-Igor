@@ -4,27 +4,25 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-/* ============ Параметры моделирования ============ */
-static const uint32_t simTicks = 5000u;
-static const uint32_t rngSeed = 42u;
+// Параметры моделирования
+static const uint32_t simTicks = 5000u; // Тиков
+static const uint32_t rngSeed = 228u;   // Сид
 static const char    *csvPath = "simulation.csv";
 
-static const int32_t priorityMin = 0;
-static const int32_t priorityMax = 15; /* было 255 */
+static const int32_t priorityMin = 0;  // Минимальный приоритет
+static const int32_t priorityMax = 15; // Максимальный приоритет
 
-static const double pGenHeavy = 0.60; /* было 0.75 */
-static const double pGenLight = 0.15;
+static const double pGenHeavy = 0.60; // Вероятность генерации события в фазе перегрузки
+static const double pGenLight = 0.15; // Вероятность генерации события в фазе разгрузки
 
-static const uint32_t durationMin = 1u;
-static const uint32_t durationMax = 4u; /* было 3 */
+static const uint32_t durationMin = 1u; // Минимальное время обработки события
+static const uint32_t durationMax = 4u; // Максимальное время обработки события
 
-static const uint32_t highFillCount = 200u; /* было 50 */
-static const int32_t  midPriority = 4;      /* было 128 */
-static const uint32_t kPopPriority = 4u;    /* было 5 */
+static const uint32_t highFillCount = 200u; // Порог заполнения, выше которого система считается перегруженной
+static const int32_t  midPriority = 4;      // Порог приоритета, ниже которого события не извлекаются в спокойной фазе
+static const uint32_t kPopPriority = 4u;    // Периодичность вызова pcqPopPriority в спокойной фазе (каждые k тиков)
 
-/* ============ ГПСЧ на rand() ============ */
 static double randUnit(void)
 {
     return (double)rand() / (double)RAND_MAX;
@@ -40,28 +38,28 @@ static uint32_t randU32(uint32_t lo, uint32_t hi)
     return lo + (uint32_t)rand() % (hi - lo + 1u);
 }
 
-/* ============ Статистика прогона ============ */
+// Статистика
 typedef struct
 {
-    uint32_t pushedOk;   /* Успешных pcqPush */
-    uint32_t pushedFail; /* Отказов pcqPush (переполнение) */
-
-    uint32_t poppedTotal;    /* Всего успешных извлечений */
-    uint32_t poppedPop;      /* Извлечено через pcqPop */
-    uint32_t poppedPrio;     /* Извлечено через pcqPopPriority */
-    uint32_t poppedAtLeast;  /* Извлечено через pcqPopAtLeast */
-    uint32_t poppedFallback; /* Извлечено через pcqPop как fallback после провала popAtLeast */
-
-    uint32_t failPrio;    /* Пустых вызовов pcqPopPriority */
-    uint32_t failAtLeast; /* Пустых вызовов pcqPopAtLeast */
-
-    uint32_t idleTicks;         /* Тиков, в которые очередь пуста и система простаивает */
-    uint32_t peakSize;          /* Максимальный размер очереди за прогон */
-    uint32_t sumDurationPopped; /* Суммарное время обработки всех извлечённых событий */
-    uint64_t busyTicks;         /* Тиков, в которые система занята обработкой */
+    uint32_t pushedOk;          // Успешных pcqPush
+    uint32_t pushedFail;        // Отказов pcqPush (переполнение)
+                                //
+    uint32_t poppedTotal;       // Всего успешных извлечений
+    uint32_t poppedPop;         // Извлечено через pcqPop
+    uint32_t poppedPrio;        // Извлечено через pcqPopPriority
+    uint32_t poppedAtLeast;     // Извлечено через pcqPopAtLeast
+    uint32_t poppedFallback;    // Извлечено через pcqPop как fallback после провала popAtLeast
+                                //
+    uint32_t failPrio;          // Пустых вызовов pcqPopPriority
+    uint32_t failAtLeast;       // Пустых вызовов pcqPopAtLeast
+                                //
+    uint32_t idleTicks;         // Тиков, в которые очередь пуста и система простаивает
+    uint32_t peakSize;          // Максимальный размер очереди за прогон
+    uint32_t sumDurationPopped; // Суммарное время обработки всех извлечённых событий
+    uint64_t busyTicks;         // Тиков, в которые система занята обработкой
 } SimStats;
 
-/* ============ Запись журнала в CSV ============ */
+// Запись журнала в CSV
 static void logHeader(FILE *f)
 {
     fprintf(f, "tick,action,method,reqPriority,duration,resultPriority,ok\n");
@@ -81,7 +79,6 @@ static void logPop(FILE *f, uint32_t t, const char *method, int32_t req, int32_t
             (int)ok);
 }
 
-/* ============ Вывод итогов в консоль (на русском) ============ */
 static bool printStats(const SimStats *st, uint32_t finalSize)
 {
     printf("\n========== Итоги симуляции ==========\n");
@@ -106,7 +103,7 @@ static bool printStats(const SimStats *st, uint32_t finalSize)
     return balanceOk;
 }
 
-/* ============ Основной цикл ============ */
+// Моделирование
 int main(void)
 {
 #ifdef _WIN32
@@ -163,7 +160,7 @@ int main(void)
         if (pcq.size > st.peakSize)
             st.peakSize = pcq.size;
 
-        /* --- Обработка, если система свободна --- */
+        // Если система свободна - континую
         if ((uint64_t)t < busyUntil)
             continue;
 
@@ -192,7 +189,7 @@ int main(void)
         }
         else
         {
-            /* Спокойная фаза: «не ниже порога», с fallback на pcqPop */
+            /* Спокойная фаза: не ниже порога, с fallback на pcqPop */
             const int32_t req = midPriority;
             ok = pcqPopAtLeast(&pcq, &d, req, &p);
             if (ok)
@@ -229,5 +226,3 @@ int main(void)
     fclose(csvFile);
     return balanceOk ? 0 : 1;
 }
-
-

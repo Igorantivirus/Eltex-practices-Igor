@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stddef.h>
 typedef int  (*SlCompareFunction)(const void *const left, const void *const right);
 typedef void (*SlFreeElement)(void *elem);
 
@@ -25,6 +26,7 @@ void       slFree(SortedList *const self);
 void       slClear(SortedList *const self);
 
 void  slRemove(SortedList *const self, const size_t index);
+void  slRemoveNoFree(SortedList *const self, const size_t index);
 void  slPopBack(SortedList *const self);
 void  slPopFront(SortedList *const self);
 void  slInsert(SortedList *const self, void *const element);

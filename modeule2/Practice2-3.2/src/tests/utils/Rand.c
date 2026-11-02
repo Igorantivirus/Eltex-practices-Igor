@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <utils/Rand.h>
 #include <utils/UInt32Array.h>
 

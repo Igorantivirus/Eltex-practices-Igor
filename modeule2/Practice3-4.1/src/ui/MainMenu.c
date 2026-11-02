@@ -50,6 +50,10 @@ ConsoleOperation editContact(void *context)
         "Изменить ссылки", editWebLink,
         "Изменить мессенджеры", editPhoneNumbers,
         "Закрыть", closeEditMenu));
+
+    slRemoveNoFree(tb, pos - 1);
+    slInsert(tb, cnt);
+
     return ConsoleOperationNone;
 }
 ConsoleOperation delContact(void *context)
