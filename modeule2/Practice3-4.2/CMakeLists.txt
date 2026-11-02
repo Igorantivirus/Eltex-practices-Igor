@@ -45,43 +45,36 @@ target_link_libraries(${EXECUTABLE_NAME} PRIVATE
 # ====================== ТЕСТЫ ====================== #
 # =================================================== #
 
-# set(TESTING_NAME "${PROJECT_NAME}_tests")
+set(TESTING_NAME "${PROJECT_NAME}_tests")
 
-# include(CTest)
+include(CTest)
 
-# if(BUILD_TESTING)
-#     include(FetchContent)
+if(BUILD_TESTING)
+    include(FetchContent)
 
-#     FetchContent_Declare(
-#         unity
-#         URL https://github.com/ThrowTheSwitch/Unity/archive/refs/tags/v2.7.0.zip
-#         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-#     )
+    FetchContent_Declare(
+        unity
+        URL https://github.com/ThrowTheSwitch/Unity/archive/refs/tags/v2.7.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    )
 
-#     FetchContent_MakeAvailable(unity)
+    FetchContent_MakeAvailable(unity)
 
-#     function(add_unity_test test_name)
-#         add_executable(${test_name} ${ARGN})
+    function(add_unity_test test_name)
+        add_executable(${test_name} ${ARGN})
 
-#         target_link_libraries(${test_name} PRIVATE
-#             ${CORE_NAME}
-#             unity
-#         )
+        target_link_libraries(${test_name} PRIVATE
+            ${CORE_NAME}
+            unity
+        )
 
-#         add_test(NAME ${test_name} COMMAND ${test_name})
-#     endfunction()
+        add_test(NAME ${test_name} COMMAND ${test_name})
+    endfunction()
 
-#     add_unity_test(string_test
-#         src/tests/utils/String.c
-#     )
-#     add_unity_test(sortedList_test
-#         src/tests/utils/SortedList.c
-#     )
-
-#     add_unity_test(contact_test
-#         src/tests/teleboock/Contact.c
-#     )
-#     add_unity_test(teleboock_test
-#         src/tests/teleboock/Teleboock.c
-#     )
-# endif()
+    add_unity_test(cycleQueue_test
+        src/tests/queue/CycleQueue.c
+    )
+    add_unity_test(priorityCycleQueue_test
+        src/tests/queue/PriorityCycleQueue.c
+    )
+endif()

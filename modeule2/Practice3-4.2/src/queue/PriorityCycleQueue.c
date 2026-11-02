@@ -17,7 +17,7 @@ PriorityCycleQueue pcqInit(int32_t minPriority, int32_t maxPriority)
     PriorityCycleQueue res;
     res.minPriority = minPriority < maxPriority ? minPriority : maxPriority;
     res.maxPriority = minPriority < maxPriority ? maxPriority : minPriority;
-    res.capacity = (uint32_t)(maxPriority - minPriority) + 1;
+    res.capacity = (uint32_t)(res.maxPriority - res.minPriority) + 1;
     res.size = 0;
     res.queues = malloc(res.capacity * sizeof(CycleQueue));
     if (!res.queues)
