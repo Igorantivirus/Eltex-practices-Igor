@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CMake: Debug (Linux)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}/cwd",
+      "console": "integratedTerminal",
+      "args": [],
+      "windows": {
+        "presentation": {
+          "hidden": true
+        }
+      }
+    },
+    {
+      "name": "CMake: Debug (Windows)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}/cwd",
+      "console": "integratedTerminal",
+      "args": [],
+      "linux": {
+        "presentation": {
+          "hidden": true
+        }
+      }
+    },
+    {
+      "name": "CMake: Debug Tests (Linux)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${cmake.testProgram}",
+      "cwd": "${cmake.testWorkingDirectory}",
+      "args": [
+        "${cmake.testArgs}"
+      ],
+      "console": "integratedTerminal",
+      "windows": {
+        "presentation": {
+          "hidden": true
+        }
+      }
+    },
+    {
+      "name": "CMake: Debug Tests (Windows)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${cmake.testProgram}",
+      "cwd": "${cmake.testWorkingDirectory}",
+      "args": [
+        "${cmake.testArgs}"
+      ],
+      "console": "integratedTerminal",
+      "linux": {
+        "presentation": {
+          "hidden": true
+        }
+      }
+    }
+  ]
+}
