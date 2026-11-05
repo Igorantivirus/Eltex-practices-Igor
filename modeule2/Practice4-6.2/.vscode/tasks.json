@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make: build",
+            "detail": "Собрать библиотеку, приложение и тесты (make)",
+            "type": "shell",
+            "command": "make",
+            "options": {},
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"],
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "make: test",
+            "detail": "Собрать и запустить все тесты (make test)",
+            "type": "shell",
+            "command": "make test",
+            "options": {},
+            "group": { "kind": "test", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "make: clean",
+            "detail": "Очистить папку сборки (make clean)",
+            "type": "shell",
+            "command": "make clean",
+            "options": {},
+            "problemMatcher": []
+        }
+    ]
+}

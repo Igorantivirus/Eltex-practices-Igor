@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Teleboock (make, Linux)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Teleboock",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "LD_LIBRARY_PATH": "${workspaceFolder}/build"
+            },
+            "preLaunchTask": "make: build",
+            "console": "integratedTerminal",
+            "args": []
+        }
+    ]
+}

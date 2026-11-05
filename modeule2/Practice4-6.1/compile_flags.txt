@@ -1,0 +1,5 @@
+-Iinclude
+-Ibuild/unity-src/src
+-std=c23
+-Wall
+-Wextra
