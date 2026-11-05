@@ -1,9 +1,14 @@
 #include <calc/DynamicLibrarys.h>
 
-#include "calc/LibraryContext.h"
-#include "utils/DynamicArray.h"
+#include <dirent.h>
+#include <link.h>
+#include <linux/limits.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/stat.h>
+
+#include <calc/LibraryContext.h>
+#include <utils/DynamicArray.h>
 
 static bool isDynamicLibrary(const char *const path)
 {
@@ -56,15 +61,14 @@ bool dlInit(DynamicLibrarys *const dl, const char *const path)
         if (!clInit(&context, libPath))
             continue;
 
-        if (!daPushBack(dl, &context))
-            clFree(&context);
+        daPushBack(dl, &context);
     }
 
     closedir(dir);
     return true;
 }
 
-bool dlFree(DynamicLibrarys *const dl)
+void dlFree(DynamicLibrarys *const dl)
 {
     daFree(dl);
 }

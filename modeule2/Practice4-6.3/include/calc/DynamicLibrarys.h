@@ -6,4 +6,4 @@
 typedef DynamicArray DynamicLibrarys;
 
 bool dlInit(DynamicLibrarys *const dl, const char *const path);
-bool dlFree(DynamicLibrarys *const dl);
+void dlFree(DynamicLibrarys *const dl);

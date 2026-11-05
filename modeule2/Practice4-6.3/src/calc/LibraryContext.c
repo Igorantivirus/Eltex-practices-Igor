@@ -1,5 +1,6 @@
 #include <calc/LibraryContext.h>
 
+#include <dlfcn.h>
 #include <stdio.h>
 #include <string.h>
 
