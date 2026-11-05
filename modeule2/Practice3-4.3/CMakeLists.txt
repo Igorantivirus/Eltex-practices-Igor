@@ -90,6 +90,9 @@ if(BUILD_TESTING)
     add_unity_test(sortedList_test
         src/tests/utils/SortedList.c
     )
+    add_unity_test(balancedTree_test
+        src/tests/utils/BalancedTree.c
+    )
 
     add_unity_test(contact_test
         src/tests/teleboock/Contact.c

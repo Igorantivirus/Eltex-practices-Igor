@@ -1,8 +1,8 @@
-#include <teleboock/Teleboock.h>
 #include <teleboock/Contact.h>
+#include <teleboock/Teleboock.h>
 
+#include <utils/BalancedTree.h>
 #include <utils/String.h>
-#include <utils/BalancedTree.h> // ИЗМЕНЕНО: добавлено
 
 #include "unity.h"
 
@@ -25,8 +25,8 @@ void testTbInit(void)
     Teleboock tb;
     tbInit(&tb);
 
-    TEST_ASSERT_EQUAL_UINT32(tb.valueSize, sizeof(Contact)); // ИЗМЕНЕНО: было oneElementSize
-    TEST_ASSERT_NOT_NULL(tb.freeFunction);                     // ИЗМЕНЕНО: было elemDestructor
+    TEST_ASSERT_EQUAL_UINT32(tb.valueSize, sizeof(Contact));
+    TEST_ASSERT_NOT_NULL(tb.freeFunction);
     TEST_ASSERT_EQUAL_UINT32(tb.size, 0);
     TEST_ASSERT_NULL(tb.root);
 
@@ -43,7 +43,7 @@ void testTbAddAndGetContact(void)
     bltInsert(&tb, &c);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 1);
-    const Contact *stored = bltGetAt(&tb, 0); // ИЗМЕНЕНО: было slGetAt
+    const Contact *stored = bltGetAt(&tb, 0);
     TEST_ASSERT_EQUAL_STRING("Ivan", stored->firstName.str);
     TEST_ASSERT_EQUAL_STRING("Petrov", stored->secondName.str);
 
@@ -64,7 +64,6 @@ void testTbMultipleContacts(void)
     bltInsert(&tb, &c3);
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 3);
-    // ИЗМЕНЕНО: сортировка теперь по фамилии: Petrov, Smirnova, Volkov
     TEST_ASSERT_EQUAL_STRING("Ivan", ((const Contact *)bltGetAt(&tb, 0))->firstName.str);
     TEST_ASSERT_EQUAL_STRING("Anna", ((const Contact *)bltGetAt(&tb, 1))->firstName.str);
     TEST_ASSERT_EQUAL_STRING("Petr", ((const Contact *)bltGetAt(&tb, 2))->firstName.str);
@@ -85,7 +84,7 @@ void testTbRemoveContact(void)
     bltInsert(&tb, &c2);
     bltInsert(&tb, &c3);
 
-    bltRemove(&tb, bltGetAt(&tb, 1)); // ИЗМЕНЕНО: было slRemove(&tb, 1); удаляется Smirnova Anna
+    bltRemove(&tb, bltGetAt(&tb, 1));
 
     TEST_ASSERT_EQUAL_UINT32(tb.size, 2);
     TEST_ASSERT_EQUAL_STRING("Ivan", ((const Contact *)bltGetAt(&tb, 0))->firstName.str);

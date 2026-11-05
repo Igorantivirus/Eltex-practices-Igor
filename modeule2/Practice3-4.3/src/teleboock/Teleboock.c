@@ -6,12 +6,12 @@ void tbInit(Teleboock *const self)
 {
     if (!self)
         return;
-    *self = bltInit(sizeof(Contact), cmpContact, constFreeContactVoid); // ИЗМЕНЕНО: было slInit
+    *self = bltInit(sizeof(Contact), cmpContact, constFreeContactVoid);
 }
 
 void tbFree(Teleboock *const self)
 {
     if (!self)
         return;
-    bltFree(self); // ИЗМЕНЕНО: было slFree
+    bltFree(self);
 }

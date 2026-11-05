@@ -2,7 +2,7 @@
 
 #include "unity.h"
 
-static int g_freeCounter;
+static int  g_freeCounter;
 static void freeCounter(void *const ptr)
 {
     (void)ptr;
@@ -61,7 +61,7 @@ void testSlInsertKeepsSorted(void)
 
     const int values[] = {5, 3, 8, 1, 9, 2, 7, 4, 6, 0};
     for (size_t i = 0; i < sizeof(values) / sizeof(values[0]); ++i)
-        slInsert(&list, &values[i]);
+        slInsert(&list, (void *)&values[i]);
 
     const int expected[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     TEST_ASSERT_EQUAL_UINT32(list.size, 10);
@@ -110,17 +110,17 @@ void testSlRemove(void)
 
 void testSlRemoveInvalidIndex(void)
 {
-    // Удаление из пустого контейнера — no-op
+    // Удаление из пустого контейнера - no-op
     SortedList empty = slInit(sizeof(int), cmpInt, NULL);
     slRemove(&empty, 0);
     slRemove(&empty, 100);
     TEST_ASSERT_EQUAL_UINT32(empty.size, 0);
     slFree(&empty);
 
-    // Удаление по индексу вне диапазона (index >= size) — no-op
+    // Удаление по индексу вне диапазона (index >= size) - no-op
     SortedList list = slInit(sizeof(int), cmpInt, NULL);
-    int a = 1;
-    int b = 2;
+    int        a = 1;
+    int        b = 2;
     slInsert(&list, &a);
     slInsert(&list, &b);
     slRemove(&list, 2);   // == size, невалидно
@@ -133,18 +133,18 @@ void testSlRemoveInvalidIndex(void)
 
 void testSlPopFrontAndBack(void)
 {
-    // Пустой контейнер — no-op
+    // Пустой контейнер - no-op
     SortedList empty = slInit(sizeof(int), cmpInt, NULL);
     slPopFront(&empty);
     slPopBack(&empty);
     TEST_ASSERT_EQUAL_UINT32(empty.size, 0);
     slFree(&empty);
 
-    // Непустой контейнер — убираем с обоих концов
+    // Непустой контейнер - убираем с обоих концов
     SortedList list = slInit(sizeof(int), cmpInt, NULL);
-    int a = 1;
-    int b = 2;
-    int c = 3;
+    int        a = 1;
+    int        b = 2;
+    int        c = 3;
     slInsert(&list, &a);
     slInsert(&list, &b);
     slInsert(&list, &c);
@@ -161,9 +161,9 @@ void testSlClear(void)
 {
     // Очистка освобождает все элементы (вызывает elemDestructor для каждого)
     SortedList list = slInit(sizeof(int), cmpInt, freeCounter);
-    int a = 1;
-    int b = 2;
-    int c = 3;
+    int        a = 1;
+    int        b = 2;
+    int        c = 3;
     slInsert(&list, &a);
     slInsert(&list, &b);
     slInsert(&list, &c);
@@ -178,15 +178,15 @@ void testSlClear(void)
 
 void testSlClearRepeated(void)
 {
-    // Повторная очистка — вторая и дальше не меняют состояние
+    // Повторная очистка - вторая и дальше не меняют состояние
     SortedList list = slInit(sizeof(int), cmpInt, freeCounter);
-    int a = 1;
-    int b = 2;
+    int        a = 1;
+    int        b = 2;
     slInsert(&list, &a);
     slInsert(&list, &b);
 
     slClear(&list);
-    slClear(&list); // пустой контейнер — no-op
+    slClear(&list); // пустой контейнер - no-op
 
     TEST_ASSERT_EQUAL_UINT32(list.size, 0);
     TEST_ASSERT_EQUAL_INT(g_freeCounter, 2); // вызовы только за первый slClear
@@ -197,8 +197,8 @@ void testSlFreeCallsDestructor(void)
 {
     // Освобождение вызывается для каждого элемента
     SortedList list = slInit(sizeof(int), cmpInt, freeCounter);
-    int a = 1;
-    int b = 2;
+    int        a = 1;
+    int        b = 2;
     slInsert(&list, &a);
     slInsert(&list, &b);
 
@@ -218,8 +218,8 @@ void testSlGetAtOutOfRange(void)
 
     // Взятие вне диапазона у непустого контейнера
     SortedList list = slInit(sizeof(int), cmpInt, NULL);
-    int a = 1;
-    int b = 2;
+    int        a = 1;
+    int        b = 2;
     slInsert(&list, &a);
     slInsert(&list, &b);
     TEST_ASSERT_NULL(slGetAt(&list, 2));

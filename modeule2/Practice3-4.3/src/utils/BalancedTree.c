@@ -5,7 +5,6 @@
 
 // private:
 
-// Создаёт узел и копирует в него значение.
 static BalancedTreeNode *bltNodeNew(const BalancedTree *const tree, const void *const value)
 {
     BalancedTreeNode *node = malloc(sizeof(BalancedTreeNode));
@@ -26,8 +25,6 @@ static BalancedTreeNode *bltNodeNew(const BalancedTree *const tree, const void *
     return node;
 }
 
-// Удаляет узел целиком: данные (через freeFunction, если freeData), память значения и сам узел.
-// ИЗМЕНЕНО: добавлен параметр freeData (для bltRemoveNoFree)
 static void bltNodeDelete(const BalancedTree *const tree, BalancedTreeNode *const node, const bool freeData)
 {
     if (freeData && tree->freeFunction)
@@ -35,15 +32,13 @@ static void bltNodeDelete(const BalancedTree *const tree, BalancedTreeNode *cons
     free(node->value);
     free(node);
 }
-
-// Рекурсивно удаляет поддерево.
 static void bltDeleteSubtree(const BalancedTree *const tree, BalancedTreeNode *const node)
 {
     if (!node)
         return;
     bltDeleteSubtree(tree, node->left);
     bltDeleteSubtree(tree, node->right);
-    bltNodeDelete(tree, node, true); // ИЗМЕНЕНО: новый параметр
+    bltNodeDelete(tree, node, true);
 }
 
 // Балансировка
@@ -57,7 +52,7 @@ static void bltUpdateHeight(BalancedTreeNode *const node)
 {
     const int l = bltHeight(node->left);
     const int r = bltHeight(node->right);
-    node->height = (uint16_t)((l > r ? l : r) + 1); // ИЗМЕНЕНО: height теперь uint16_t
+    node->height = (uint16_t)((l > r ? l : r) + 1);
 }
 
 // > 0 — перевешивает левое поддерево, < 0 — правое
@@ -66,11 +61,6 @@ static int bltBalanceFactor(const BalancedTreeNode *const node)
     return bltHeight(node->left) - bltHeight(node->right);
 }
 
-//      node            left
-//      /  \            /  \
-//    left  C   ->     A   node
-//    /  \                 /  \
-//   A    B               B    C
 static BalancedTreeNode *bltRotateRight(BalancedTreeNode *const node)
 {
     BalancedTreeNode *const left = node->left;
@@ -81,7 +71,6 @@ static BalancedTreeNode *bltRotateRight(BalancedTreeNode *const node)
     return left;
 }
 
-// Зеркально bltRotateRight
 static BalancedTreeNode *bltRotateLeft(BalancedTreeNode *const node)
 {
     BalancedTreeNode *const right = node->right;
@@ -113,9 +102,6 @@ static BalancedTreeNode *bltBalance(BalancedTreeNode *const node)
     return node;
 }
 
-// ---- Рекурсивные операции (глубина рекурсии O(log n)) ----
-
-// result — указатель на хранимое значение или NULL, если не хватило памяти.
 static BalancedTreeNode *bltInsertNode(BalancedTree *const tree, BalancedTreeNode *const node, const void *const value, const void **const result)
 {
     if (!node)
@@ -133,7 +119,6 @@ static BalancedTreeNode *bltInsertNode(BalancedTree *const tree, BalancedTreeNod
     if (res == 0)
     {
         // Значение уже есть: чистим старые данные и записываем новые
-        // (если передали указатель на само хранимое значение — делать нечего)
         if (value != node->value)
         {
             if (tree->freeFunction)
@@ -151,7 +136,6 @@ static BalancedTreeNode *bltInsertNode(BalancedTree *const tree, BalancedTreeNod
     return bltBalance(node);
 }
 
-// Вырезает минимальный узел поддерева (не удаляя его), возвращает новый корень поддерева.
 static BalancedTreeNode *bltDetachMin(BalancedTreeNode *const node, BalancedTreeNode **const minNode)
 {
     if (!node->left)
@@ -163,7 +147,6 @@ static BalancedTreeNode *bltDetachMin(BalancedTreeNode *const node, BalancedTree
     return bltBalance(node);
 }
 
-// ИЗМЕНЕНО: добавлен параметр freeData
 static BalancedTreeNode *bltRemoveNode(BalancedTree *const tree, BalancedTreeNode *const node, const void *const value, const bool freeData, bool *const removed)
 {
     if (!node)
@@ -177,8 +160,8 @@ static BalancedTreeNode *bltRemoveNode(BalancedTree *const tree, BalancedTreeNod
     else
     {
         BalancedTreeNode *const left = node->left;
-        BalancedTreeNode *right = node->right;
-        bltNodeDelete(tree, node, freeData); // ИЗМЕНЕНО: freeData. value больше не трогаем: он мог указывать в этот узел
+        BalancedTreeNode       *right = node->right;
+        bltNodeDelete(tree, node, freeData);
         tree->size--;
         *removed = true;
 
@@ -255,11 +238,10 @@ bool bltRemove(BalancedTree *const self, const void *const value)
         return false;
 
     bool removed = false;
-    self->root = bltRemoveNode(self, self->root, value, true, &removed); // ИЗМЕНЕНО: freeData = true
+    self->root = bltRemoveNode(self, self->root, value, true, &removed);
     return removed;
 }
 
-// ДОБАВЛЕНО
 bool bltRemoveNoFree(BalancedTree *const self, const void *const value)
 {
     if (!self || !value || !self->compare)
@@ -316,7 +298,6 @@ size_t bltSize(const BalancedTree *const self)
     return self ? self->size : 0;
 }
 
-// ДОБАВЛЕНО
 const void *bltGetAt(const BalancedTree *const self, const size_t index)
 {
     if (!self || index >= self->size)

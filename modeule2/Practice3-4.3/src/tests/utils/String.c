@@ -80,20 +80,20 @@ void testFreeString(void)
 
 void testRepeatedAndNullFree(void)
 {
-    // Повторное освобождение — должно быть безопасно (no-op после первого)
+    // Повторное освобождение - должно быть безопасно (no-op после первого)
     String s = sInitCharArray("Hello");
     sFree(&s);
     sFree(&s);
     TEST_ASSERT_TRUE(s.str == NULL);
     TEST_ASSERT_TRUE(s.size == 0);
 
-    // Освобождение NULL-указателя — не должно падать
+    // Освобождение NULL-указателя - не должно падать
     sFree(NULL);
 }
 
 void testInitFromNull(void)
 {
-    // Копирование из NULL / пустого — безопасно, результат пуст
+    // Копирование из NULL / пустого - безопасно, результат пуст
     String empty = sInitEmpty();
     String fromNull = sInitString(NULL);
     TEST_ASSERT_TRUE(fromNull.str == NULL);
@@ -103,7 +103,7 @@ void testInitFromNull(void)
     TEST_ASSERT_TRUE(fromEmpty.str == NULL);
     TEST_ASSERT_TRUE(fromEmpty.size == 0);
 
-    // Создание из NULL-строки — безопасно
+    // Создание из NULL-строки - безопасно
     String fromNullChar = sInitCharArray(NULL);
     TEST_ASSERT_TRUE(fromNullChar.str == NULL);
     TEST_ASSERT_TRUE(fromNullChar.size == 0);

@@ -1,9 +1,9 @@
-#include "teleboock/Contact.h"
-#include "utils/BalancedTree.h" // ИЗМЕНЕНО: было utils/SortedList.h
 #include <ui/MainMenu.h>
 
+#include <teleboock/Contact.h>
 #include <ui/EditContactMenu.h>
 #include <ui/menu/InputOutput.h>
+#include <utils/BalancedTree.h>
 
 #define saveTeleboock(from, to)      \
     if (!from)                       \
@@ -19,7 +19,7 @@ ConsoleOperation addContact(void *context)
         constFreeContact(&cnt);
         inReadContact(&cnt);
     } while (inReadBool("Сохранить контакт? (y/n): ") == false);
-    bltInsert(tb, &cnt); // ИЗМЕНЕНО: было slInsert
+    bltInsert(tb, &cnt);
     return ConsoleOperationNone;
 }
 ConsoleOperation editContact(void *context)
@@ -57,7 +57,7 @@ ConsoleOperation editContact(void *context)
         "Изменить мессенджеры", editPhoneNumbers,
         "Закрыть", closeEditMenu));
 
-    bltInsert(tb, cnt); // ИЗМЕНЕНО: было slRemoveNoFree + slInsert (удаление теперь выше, до редактирования)
+    bltInsert(tb, cnt);
 
     return ConsoleOperationNone;
 }
@@ -70,7 +70,7 @@ ConsoleOperation delContact(void *context)
         printf("Индекс вне диапазона\n");
         return ConsoleOperationNone;
     }
-    bltRemove(tb, bltGetAt(tb, pos - 1)); // ИЗМЕНЕНО: было slRemove(tb, pos - 1)
+    bltRemove(tb, bltGetAt(tb, pos - 1));
     return ConsoleOperationNone;
 }
 
@@ -78,9 +78,9 @@ ConsoleOperation delContact(void *context)
 ConsoleOperation printContacts(void *context)
 {
     saveTeleboock(context, tb);
-    for (size_t i = 0; i < tb->size; i++) // ИЗМЕНЕНО: int -> size_t
+    for (size_t i = 0; i < tb->size; i++)
     {
-        const Contact *cnt = bltGetAt(tb, i); // ИЗМЕНЕНО: было Contact *cnt = slGetAt(tb, i)
+        const Contact *cnt = bltGetAt(tb, i);
         outPrintContact(cnt, "Контакт:");
     }
     return ConsoleOperationNone;

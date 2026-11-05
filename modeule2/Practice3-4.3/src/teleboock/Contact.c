@@ -4,7 +4,6 @@
 #include <utils/Compars.h>
 #include <utils/String.h>
 
-// ДОБАВЛЕНО: сравнение строк, где str == NULL (пустая строка из sInitEmpty) считается ""
 static int cmpField(const String *const left, const String *const right)
 {
     const String l = {left->str ? left->str : "", 0, 0};
@@ -12,7 +11,6 @@ static int cmpField(const String *const left, const String *const right)
     return cmpString(&l, &r);
 }
 
-// ДОБАВЛЕНО: поэлементное сравнение списков строк, при равном префиксе короче — меньше
 static int cmpStringList(const SortedList *const left, const SortedList *const right)
 {
     const size_t n = left->size < right->size ? left->size : right->size;
