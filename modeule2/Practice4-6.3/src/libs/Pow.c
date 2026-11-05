@@ -1,4 +1,4 @@
-#include <cmath>
+#include <math.h>
 #include <libs/LibsHeader.h>
 
 double mathCalcFunction(const double left, const double right)

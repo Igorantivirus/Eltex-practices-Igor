@@ -1,4 +1,5 @@
 #include "calc/DynamicLibrarys.h"
+#include "calc/LibraryContext.h"
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -22,8 +23,15 @@ void calcApp(const CalcAppConfig *const config)
         return;
     }
 
+    for(size_t i = 0; i < libs.size; ++i)
+    {
+        LibraryContext* lib = daGetAt(&libs, i);
+        printf("%c ", lib->operation);
+    }
+    printf("\n");
+
     CallTree tree;
-    ctInit(&tree, NULL, initDefaultBinOpTree());
+    ctInit(&tree, NULL, initOpersByLibs(&libs));
 
     while (true)
     {

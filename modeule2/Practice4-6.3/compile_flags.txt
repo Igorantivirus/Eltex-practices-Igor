@@ -1,0 +1,6 @@
+-Iinclude
+-Ibuild/unity-src/src
+-DUNITY_INCLUDE_DOUBLE
+-std=c23
+-Wall
+-Wextra
